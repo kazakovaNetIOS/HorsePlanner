@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Буцефал",
+        "age": 5,
+        "owner": "Александр Македонский",
+        "imageName": "bucefal"
+    },
+    {
+        "id": 2,
+        "name": "Старый Билли",
+        "age": 9,
+        "owner": "Генри Гаррисон",
+        "imageName": "billi"
+    },
+    {
+        "id": 3,
+        "name": "Эклипс",
+        "age": 8,
+        "owner": "Джон Смит",
+        "imageName": "eclips"
+    },
+    {
+        "id": 4,
+        "name": "Линус",
+        "age": 10,
+        "owner": "Гарри Рутерфорд",
+        "imageName": "linus"
+    },
+    {
+        "id": 5,
+        "name": "Тони",
+        "age": 7,
+        "owner": "Тони Микс",
+        "imageName": "toni"
+    }
+]
