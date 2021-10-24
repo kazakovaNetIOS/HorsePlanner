@@ -18,4 +18,12 @@ struct Horse: Hashable, Codable, Identifiable {
     var image: Image {
         Image(imageName)
     }
+    
+    init(id: Int, name: String, age: Int, owner: String, imageName: String) {
+        self.id = id
+        self.name = name
+        self.age = age
+        self.owner = owner
+        self.imageName = imageName
+    }
 }

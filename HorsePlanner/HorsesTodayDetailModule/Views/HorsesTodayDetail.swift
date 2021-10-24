@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HorseDetail: View {
+struct HorsesTodayDetail: View {
     let horse: Horse
     
     var body: some View {
@@ -26,6 +26,6 @@ struct HorseDetail: View {
 
 struct HorseDetail_Previews: PreviewProvider {
     static var previews: some View {
-        HorseDetail(horse: horses[0])
+        HorsesTodayDetail(horse: horses[0])
     }
 }

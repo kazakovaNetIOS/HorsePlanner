@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct HorsesTodayList: View {
+    var viewModel: HorsesTodayViewModel
+    
     var body: some View {
         NavigationView {
             List(horses) { horse in
-                NavigationLink(destination: HorseDetail(horse: horse)) {
+                NavigationLink(destination: HorsesTodayDetail(horse: horse)) {
                     HorsesTodayRow(horse: horse)
                 }
             }
@@ -22,6 +24,6 @@ struct HorsesTodayList: View {
 
 struct HorsesTodayList_Previews: PreviewProvider {
     static var previews: some View {
-        HorsesTodayList()
+        HorsesTodayList(viewModel: HorsesTodayViewModel())
     }
 }
