@@ -1,5 +1,5 @@
 //
-//  ApiClient+Extention.swift
+//  ApiClient+HorsesTodayExtention.swift
 //  HorsePlanner
 //
 //  Created by Kazakova Nataliya on 24.10.2021.
