@@ -8,10 +8,10 @@
 import Foundation
 
 struct HorsesTodayViewModel {
-    var api = ApiClient.shared
+    var loadHorsesToday: ((Result<[Horse]>) -> Void)?
     
     func initialize() {
-        api.loadHorsesToday { horses in
+        loadHorsesToday? { horses in
             print("loadHorsesToday completion", horses)
         }
     }

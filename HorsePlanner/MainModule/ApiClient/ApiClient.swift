@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias Result<T> = (T) -> Void
+
 class ApiClient {
     static let shared = ApiClient()
     private init() {}
