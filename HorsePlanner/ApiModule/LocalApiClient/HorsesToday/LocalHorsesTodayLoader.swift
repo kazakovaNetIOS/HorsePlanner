@@ -1,5 +1,5 @@
 //
-//  LocalApiHorsesTodayLoader.swift
+//  LocalHorsesTodayLoader.swift
 //  HorsePlanner
 //
 //  Created by Kazakova Nataliya on 26.10.2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LocalApiHorsesTodayLoader: HorsesTodayLoader {
+struct LocalHorsesTodayLoader: HorsesTodayLoader {
     private var api: LocalApiClient
     
     func loadHorsesToday(completion: @escaping ([Horse]) -> Void) {

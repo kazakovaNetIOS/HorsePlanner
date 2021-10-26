@@ -1,5 +1,5 @@
 //
-//  RemoteApiHorsesTodayLoader.swift
+//  RemoteHorsesTodayLoader.swift
 //  HorsePlanner
 //
 //  Created by Kazakova Nataliya on 25.10.2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RemoteApiHorsesTodayLoader: HorsesTodayLoader {
+struct RemoteHorsesTodayLoader: HorsesTodayLoader {
     private var api: RemoteApiClient
     
     func loadHorsesToday(completion: @escaping ([Horse]) -> Void) {
