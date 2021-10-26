@@ -25,7 +25,7 @@
 		8A6139DE271B78DF00FBD5F5 /* HorsesTodayRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6139DD271B78DF00FBD5F5 /* HorsesTodayRow.swift */; };
 		8A640005272864F200116737 /* RemoteApiHorsesTodayDetailsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A640003272864F200116737 /* RemoteApiHorsesTodayDetailsLoader.swift */; };
 		8A640006272864F200116737 /* RemoteApiClient+HorsesTodayDetailExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A640004272864F200116737 /* RemoteApiClient+HorsesTodayDetailExtention.swift */; };
-		8A6400082728655800116737 /* RemoteWithLocalFallbackHorsesTodayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6400072728655800116737 /* RemoteWithLocalFallbackHorsesTodayService.swift */; };
+		8A6400082728655800116737 /* RemoteWithLocalFallbackHorsesTodayLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6400072728655800116737 /* RemoteWithLocalFallbackHorsesTodayLoader.swift */; };
 		8A64FFFF272861D800116737 /* horsesTodayDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A59C7262727E9AD00875A5C /* horsesTodayDetail.json */; };
 		8AAFB8792725DF510001673A /* RemoteApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB8782725DF510001673A /* RemoteApiClient.swift */; };
 		8AAFB87C2725E0040001673A /* HorsesTodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB87B2725E0040001673A /* HorsesTodayViewModel.swift */; };
@@ -58,7 +58,7 @@
 		8A6139DD271B78DF00FBD5F5 /* HorsesTodayRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTodayRow.swift; sourceTree = "<group>"; };
 		8A640003272864F200116737 /* RemoteApiHorsesTodayDetailsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteApiHorsesTodayDetailsLoader.swift; sourceTree = "<group>"; };
 		8A640004272864F200116737 /* RemoteApiClient+HorsesTodayDetailExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RemoteApiClient+HorsesTodayDetailExtention.swift"; sourceTree = "<group>"; };
-		8A6400072728655800116737 /* RemoteWithLocalFallbackHorsesTodayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWithLocalFallbackHorsesTodayService.swift; sourceTree = "<group>"; };
+		8A6400072728655800116737 /* RemoteWithLocalFallbackHorsesTodayLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWithLocalFallbackHorsesTodayLoader.swift; sourceTree = "<group>"; };
 		8AAFB8782725DF510001673A /* RemoteApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteApiClient.swift; sourceTree = "<group>"; };
 		8AAFB87B2725E0040001673A /* HorsesTodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTodayViewModel.swift; sourceTree = "<group>"; };
 		8AAFB87D2725E0480001673A /* RemoteApiClient+HorsesTodayExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteApiClient+HorsesTodayExtention.swift"; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 		8A64000A2728663F00116737 /* HorsesToday */ = {
 			isa = PBXGroup;
 			children = (
-				8A6400072728655800116737 /* RemoteWithLocalFallbackHorsesTodayService.swift */,
+				8A6400072728655800116737 /* RemoteWithLocalFallbackHorsesTodayLoader.swift */,
 			);
 			path = HorsesToday;
 			sourceTree = "<group>";
@@ -390,7 +390,7 @@
 				8A6139D9271B77E100FBD5F5 /* ModelData.swift in Sources */,
 				8AAFB87E2725E0480001673A /* RemoteApiClient+HorsesTodayExtention.swift in Sources */,
 				8A59C7172727D86000875A5C /* HorsesTodayDetailsLoader.swift in Sources */,
-				8A6400082728655800116737 /* RemoteWithLocalFallbackHorsesTodayService.swift in Sources */,
+				8A6400082728655800116737 /* RemoteWithLocalFallbackHorsesTodayLoader.swift in Sources */,
 				8A640006272864F200116737 /* RemoteApiClient+HorsesTodayDetailExtention.swift in Sources */,
 				8A59C7232727DD0B00875A5C /* LocalApiHorsesTodayDetailsLoader.swift in Sources */,
 				8AAFB8832725E4F80001673A /* HorsesTodayDetailViewModel.swift in Sources */,

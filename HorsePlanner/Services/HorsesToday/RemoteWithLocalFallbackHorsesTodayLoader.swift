@@ -1,5 +1,5 @@
 //
-//  RemoteWithLocalFallbackHorsesTodayService.swift
+//  RemoteWithLocalFallbackHorsesTodayLoader.swift
 //  HorsePlanner
 //
 //  Created by Kazakova Nataliya on 26.10.2021.
@@ -11,7 +11,7 @@ struct Reachability {
     static let networkAvailable = false
 }
 
-class RemoteWithLocalFallbackHorsesTodayService {
+class RemoteWithLocalFallbackHorsesTodayLoader {
     let remote: RemoteHorsesTodayLoader
     let local: LocalHorsesTodayLoader
     
@@ -19,12 +19,13 @@ class RemoteWithLocalFallbackHorsesTodayService {
         self.remote = remote
         self.local = local
     }
-    
+}
+
+extension RemoteWithLocalFallbackHorsesTodayLoader: HorsesTodayLoader {
     func loadHorsesToday(completion: @escaping([Horse]) -> Void) {
-        if Reachability.networkAvailable {
-            remote.loadHorsesToday(completion: completion)
-        } else {
-            local.loadHorsesToday(completion: completion)
-        }
+        let load =  Reachability.networkAvailable ?
+        remote.loadHorsesToday : local.loadHorsesToday
+        
+        load(completion)
     }
 }
