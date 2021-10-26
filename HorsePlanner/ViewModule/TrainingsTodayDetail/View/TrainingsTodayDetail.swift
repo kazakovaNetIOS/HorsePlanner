@@ -1,5 +1,5 @@
 //
-//  HorseDetail.swift
+//  TrainingsTodayDetail.swift
 //  HorsePlanner
 //
 //  Created by Kazakova Nataliya on 17.10.2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HorsesTodayDetail: View {
+struct TrainingsTodayDetail: View {
     let horse: Horse
     
     var body: some View {
@@ -26,6 +26,6 @@ struct HorsesTodayDetail: View {
 
 struct HorseDetail_Previews: PreviewProvider {
     static var previews: some View {
-        HorsesTodayDetail(horse: horses[0])
+        TrainingsTodayDetail(horse: horses[0])
     }
 }

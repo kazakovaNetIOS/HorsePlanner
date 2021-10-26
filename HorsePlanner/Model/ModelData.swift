@@ -7,8 +7,8 @@
 
 import Foundation
 
-let horses: [Horse] = loadGlobal("horsesToday.json")
-let globalHorse: Horse = loadGlobal("horsesTodayDetail.json")
+let horses: [Horse] = loadGlobal("TrainingsToday.json")
+let globalHorse: Horse = loadGlobal("TrainingsTodayDetail.json")
 
 func loadGlobal<T: Decodable>(_ filename: String) -> T {
     let data: Data
