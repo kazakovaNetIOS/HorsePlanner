@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A59C70D2727322500875A5C /* HorsesTodayAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59C70C2727322500875A5C /* HorsesTodayAdapter.swift */; };
-		8A59C70F272732B300875A5C /* HorsesTodayDetailsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59C70E272732B300875A5C /* HorsesTodayDetailsAdapter.swift */; };
+		8A59C70D2727322500875A5C /* RemoteApiHorsesTodayLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59C70C2727322500875A5C /* RemoteApiHorsesTodayLoader.swift */; };
+		8A59C70F272732B300875A5C /* RemoteApiHorsesTodayDetailsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59C70E272732B300875A5C /* RemoteApiHorsesTodayDetailsLoader.swift */; };
 		8A59C7152727D69200875A5C /* HorsesTodayLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59C7142727D69200875A5C /* HorsesTodayLoader.swift */; };
 		8A59C7172727D86000875A5C /* HorsesTodayDetailsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59C7162727D86000875A5C /* HorsesTodayDetailsLoader.swift */; };
+		8A59C71B2727DC1F00875A5C /* LocalApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59C71A2727DC1F00875A5C /* LocalApiClient.swift */; };
+		8A59C71F2727DC7600875A5C /* LocalApiHorsesTodayLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59C71E2727DC7600875A5C /* LocalApiHorsesTodayLoader.swift */; };
+		8A59C7212727DCB800875A5C /* LocalApiClient+HorsesTodayExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59C7202727DCB800875A5C /* LocalApiClient+HorsesTodayExtention.swift */; };
+		8A59C7232727DD0B00875A5C /* LocalApiHorsesTodayDetailsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59C7222727DD0B00875A5C /* LocalApiHorsesTodayDetailsLoader.swift */; };
+		8A59C7252727DD3300875A5C /* LocalApiClient+HorsesTodayDetailsExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59C7242727DD3300875A5C /* LocalApiClient+HorsesTodayDetailsExtention.swift */; };
 		8A6139C7271A2D4C00FBD5F5 /* HorsePlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6139C6271A2D4C00FBD5F5 /* HorsePlannerApp.swift */; };
 		8A6139C9271A2D4C00FBD5F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6139C8271A2D4C00FBD5F5 /* ContentView.swift */; };
 		8A6139CB271A2D4D00FBD5F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A6139CA271A2D4D00FBD5F5 /* Assets.xcassets */; };
@@ -19,22 +24,29 @@
 		8A6139D7271B753100FBD5F5 /* Horse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6139D6271B753100FBD5F5 /* Horse.swift */; };
 		8A6139D9271B77E100FBD5F5 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6139D8271B77E100FBD5F5 /* ModelData.swift */; };
 		8A6139DE271B78DF00FBD5F5 /* HorsesTodayRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6139DD271B78DF00FBD5F5 /* HorsesTodayRow.swift */; };
-		8AAFB8792725DF510001673A /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB8782725DF510001673A /* ApiClient.swift */; };
+		8A64FFFF272861D800116737 /* horsesTodayDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A59C7262727E9AD00875A5C /* horsesTodayDetail.json */; };
+		8AAFB8792725DF510001673A /* RemoteApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB8782725DF510001673A /* RemoteApiClient.swift */; };
 		8AAFB87C2725E0040001673A /* HorsesTodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB87B2725E0040001673A /* HorsesTodayViewModel.swift */; };
-		8AAFB87E2725E0480001673A /* ApiClient+HorsesTodayExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB87D2725E0480001673A /* ApiClient+HorsesTodayExtention.swift */; };
+		8AAFB87E2725E0480001673A /* RemoteApiClient+HorsesTodayExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB87D2725E0480001673A /* RemoteApiClient+HorsesTodayExtention.swift */; };
 		8AAFB8812725E1260001673A /* Arbitrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB8802725E1260001673A /* Arbitrary.swift */; };
 		8AAFB8832725E4F80001673A /* HorsesTodayDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB8822725E4F80001673A /* HorsesTodayDetailViewModel.swift */; };
-		8AAFB8862725E5450001673A /* ApiClient+HorsesTodayDetailExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB8852725E5450001673A /* ApiClient+HorsesTodayDetailExtention.swift */; };
+		8AAFB8862725E5450001673A /* RemoteApiClient+HorsesTodayDetailExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB8852725E5450001673A /* RemoteApiClient+HorsesTodayDetailExtention.swift */; };
 		8AC038FD271B7F3100DF27AD /* HorsesTodayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC038FC271B7F3100DF27AD /* HorsesTodayList.swift */; };
 		8AC038FF271B85BB00DF27AD /* HorsesTodayDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC038FE271B85BB00DF27AD /* HorsesTodayDetail.swift */; };
 		8AC03901271B872D00DF27AD /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC03900271B872D00DF27AD /* CircleImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8A59C70C2727322500875A5C /* HorsesTodayAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTodayAdapter.swift; sourceTree = "<group>"; };
-		8A59C70E272732B300875A5C /* HorsesTodayDetailsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTodayDetailsAdapter.swift; sourceTree = "<group>"; };
+		8A59C70C2727322500875A5C /* RemoteApiHorsesTodayLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteApiHorsesTodayLoader.swift; sourceTree = "<group>"; };
+		8A59C70E272732B300875A5C /* RemoteApiHorsesTodayDetailsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteApiHorsesTodayDetailsLoader.swift; sourceTree = "<group>"; };
 		8A59C7142727D69200875A5C /* HorsesTodayLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTodayLoader.swift; sourceTree = "<group>"; };
 		8A59C7162727D86000875A5C /* HorsesTodayDetailsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTodayDetailsLoader.swift; sourceTree = "<group>"; };
+		8A59C71A2727DC1F00875A5C /* LocalApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalApiClient.swift; sourceTree = "<group>"; };
+		8A59C71E2727DC7600875A5C /* LocalApiHorsesTodayLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalApiHorsesTodayLoader.swift; sourceTree = "<group>"; };
+		8A59C7202727DCB800875A5C /* LocalApiClient+HorsesTodayExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalApiClient+HorsesTodayExtention.swift"; sourceTree = "<group>"; };
+		8A59C7222727DD0B00875A5C /* LocalApiHorsesTodayDetailsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalApiHorsesTodayDetailsLoader.swift; sourceTree = "<group>"; };
+		8A59C7242727DD3300875A5C /* LocalApiClient+HorsesTodayDetailsExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalApiClient+HorsesTodayDetailsExtention.swift"; sourceTree = "<group>"; };
+		8A59C7262727E9AD00875A5C /* horsesTodayDetail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = horsesTodayDetail.json; sourceTree = "<group>"; };
 		8A6139C3271A2D4C00FBD5F5 /* HorsePlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorsePlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A6139C6271A2D4C00FBD5F5 /* HorsePlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsePlannerApp.swift; sourceTree = "<group>"; };
 		8A6139C8271A2D4C00FBD5F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,12 +56,12 @@
 		8A6139D6271B753100FBD5F5 /* Horse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horse.swift; sourceTree = "<group>"; };
 		8A6139D8271B77E100FBD5F5 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		8A6139DD271B78DF00FBD5F5 /* HorsesTodayRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTodayRow.swift; sourceTree = "<group>"; };
-		8AAFB8782725DF510001673A /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		8AAFB8782725DF510001673A /* RemoteApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteApiClient.swift; sourceTree = "<group>"; };
 		8AAFB87B2725E0040001673A /* HorsesTodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTodayViewModel.swift; sourceTree = "<group>"; };
-		8AAFB87D2725E0480001673A /* ApiClient+HorsesTodayExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiClient+HorsesTodayExtention.swift"; sourceTree = "<group>"; };
+		8AAFB87D2725E0480001673A /* RemoteApiClient+HorsesTodayExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteApiClient+HorsesTodayExtention.swift"; sourceTree = "<group>"; };
 		8AAFB8802725E1260001673A /* Arbitrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arbitrary.swift; sourceTree = "<group>"; };
 		8AAFB8822725E4F80001673A /* HorsesTodayDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTodayDetailViewModel.swift; sourceTree = "<group>"; };
-		8AAFB8852725E5450001673A /* ApiClient+HorsesTodayDetailExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiClient+HorsesTodayDetailExtention.swift"; sourceTree = "<group>"; };
+		8AAFB8852725E5450001673A /* RemoteApiClient+HorsesTodayDetailExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteApiClient+HorsesTodayDetailExtention.swift"; sourceTree = "<group>"; };
 		8AC038FC271B7F3100DF27AD /* HorsesTodayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTodayList.swift; sourceTree = "<group>"; };
 		8AC038FE271B85BB00DF27AD /* HorsesTodayDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTodayDetail.swift; sourceTree = "<group>"; };
 		8AC03900271B872D00DF27AD /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
@@ -66,42 +78,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8A59C70A272731D900875A5C /* MainModule */ = {
+		8A59C70A272731D900875A5C /* ApiModule */ = {
 			isa = PBXGroup;
 			children = (
-				8A59C70B2727321600875A5C /* Adapters */,
-				8AAFB8772725DF430001673A /* ApiClient */,
+				8A59C7192727DBDC00875A5C /* LocalApiClient */,
+				8AAFB8772725DF430001673A /* RemoteApiClient */,
 			);
-			path = MainModule;
+			path = ApiModule;
 			sourceTree = "<group>";
 		};
-		8A59C70B2727321600875A5C /* Adapters */ = {
+		8A59C70B2727321600875A5C /* RemoteApiLoaders */ = {
 			isa = PBXGroup;
 			children = (
 				8A59C7102727333500875A5C /* HorsesToday */,
-				8A59C7112727334000875A5C /* HorsesTodayDetail */,
+				8A59C7112727334000875A5C /* HorsesTodayDetails */,
 			);
-			path = Adapters;
+			path = RemoteApiLoaders;
 			sourceTree = "<group>";
 		};
 		8A59C7102727333500875A5C /* HorsesToday */ = {
 			isa = PBXGroup;
 			children = (
-				8A59C7142727D69200875A5C /* HorsesTodayLoader.swift */,
-				8A59C70C2727322500875A5C /* HorsesTodayAdapter.swift */,
-				8AAFB87D2725E0480001673A /* ApiClient+HorsesTodayExtention.swift */,
+				8A59C70C2727322500875A5C /* RemoteApiHorsesTodayLoader.swift */,
+				8AAFB87D2725E0480001673A /* RemoteApiClient+HorsesTodayExtention.swift */,
 			);
 			path = HorsesToday;
 			sourceTree = "<group>";
 		};
-		8A59C7112727334000875A5C /* HorsesTodayDetail */ = {
+		8A59C7112727334000875A5C /* HorsesTodayDetails */ = {
 			isa = PBXGroup;
 			children = (
-				8A59C7162727D86000875A5C /* HorsesTodayDetailsLoader.swift */,
-				8A59C70E272732B300875A5C /* HorsesTodayDetailsAdapter.swift */,
-				8AAFB8852725E5450001673A /* ApiClient+HorsesTodayDetailExtention.swift */,
+				8A59C70E272732B300875A5C /* RemoteApiHorsesTodayDetailsLoader.swift */,
+				8AAFB8852725E5450001673A /* RemoteApiClient+HorsesTodayDetailExtention.swift */,
 			);
-			path = HorsesTodayDetail;
+			path = HorsesTodayDetails;
+			sourceTree = "<group>";
+		};
+		8A59C7182727DB2E00875A5C /* ViewModule */ = {
+			isa = PBXGroup;
+			children = (
+				8AAFB872272578400001673A /* HorsesToday */,
+				8AAFB874272578650001673A /* HorsesTodayDetail */,
+			);
+			path = ViewModule;
+			sourceTree = "<group>";
+		};
+		8A59C7192727DBDC00875A5C /* LocalApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				8A59C71C2727DC3900875A5C /* HorsesToday */,
+				8A59C71D2727DC4500875A5C /* HorsesTodayDetails */,
+				8A59C71A2727DC1F00875A5C /* LocalApiClient.swift */,
+			);
+			path = LocalApiClient;
+			sourceTree = "<group>";
+		};
+		8A59C71C2727DC3900875A5C /* HorsesToday */ = {
+			isa = PBXGroup;
+			children = (
+				8A59C71E2727DC7600875A5C /* LocalApiHorsesTodayLoader.swift */,
+				8A59C7202727DCB800875A5C /* LocalApiClient+HorsesTodayExtention.swift */,
+			);
+			path = HorsesToday;
+			sourceTree = "<group>";
+		};
+		8A59C71D2727DC4500875A5C /* HorsesTodayDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8A59C7222727DD0B00875A5C /* LocalApiHorsesTodayDetailsLoader.swift */,
+				8A59C7242727DD3300875A5C /* LocalApiClient+HorsesTodayDetailsExtention.swift */,
+			);
+			path = HorsesTodayDetails;
 			sourceTree = "<group>";
 		};
 		8A6139BA271A2D4C00FBD5F5 = {
@@ -123,10 +170,9 @@
 		8A6139C5271A2D4C00FBD5F5 /* HorsePlanner */ = {
 			isa = PBXGroup;
 			children = (
-				8A59C70A272731D900875A5C /* MainModule */,
+				8A59C70A272731D900875A5C /* ApiModule */,
+				8A59C7182727DB2E00875A5C /* ViewModule */,
 				8AAFB87F2725E1110001673A /* DummyHelpers */,
-				8AAFB872272578400001673A /* HorsesTodayModule */,
-				8AAFB874272578650001673A /* HorsesTodayDetailModule */,
 				8AAFB8762725DEA30001673A /* CommonViews */,
 				8A6139C6271A2D4C00FBD5F5 /* HorsePlannerApp.swift */,
 				8A6139DA271B787D00FBD5F5 /* Views */,
@@ -158,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				8A6139D4271B73D800FBD5F5 /* horsesToday.json */,
+				8A59C7262727E9AD00875A5C /* horsesTodayDetail.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -171,39 +218,39 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		8AAFB872272578400001673A /* HorsesTodayModule */ = {
+		8AAFB872272578400001673A /* HorsesToday */ = {
 			isa = PBXGroup;
 			children = (
 				8AAFB87A2725DFF20001673A /* ViewModel */,
-				8AAFB873272578520001673A /* Views */,
+				8AAFB873272578520001673A /* View */,
 			);
-			path = HorsesTodayModule;
+			path = HorsesToday;
 			sourceTree = "<group>";
 		};
-		8AAFB873272578520001673A /* Views */ = {
+		8AAFB873272578520001673A /* View */ = {
 			isa = PBXGroup;
 			children = (
 				8AC038FC271B7F3100DF27AD /* HorsesTodayList.swift */,
 				8A6139DD271B78DF00FBD5F5 /* HorsesTodayRow.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
-		8AAFB874272578650001673A /* HorsesTodayDetailModule */ = {
+		8AAFB874272578650001673A /* HorsesTodayDetail */ = {
 			isa = PBXGroup;
 			children = (
 				8AAFB8842725E4FD0001673A /* ViewModel */,
-				8AAFB875272578850001673A /* Views */,
+				8AAFB875272578850001673A /* View */,
 			);
-			path = HorsesTodayDetailModule;
+			path = HorsesTodayDetail;
 			sourceTree = "<group>";
 		};
-		8AAFB875272578850001673A /* Views */ = {
+		8AAFB875272578850001673A /* View */ = {
 			isa = PBXGroup;
 			children = (
 				8AC038FE271B85BB00DF27AD /* HorsesTodayDetail.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		8AAFB8762725DEA30001673A /* CommonViews */ = {
@@ -214,17 +261,19 @@
 			path = CommonViews;
 			sourceTree = "<group>";
 		};
-		8AAFB8772725DF430001673A /* ApiClient */ = {
+		8AAFB8772725DF430001673A /* RemoteApiClient */ = {
 			isa = PBXGroup;
 			children = (
-				8AAFB8782725DF510001673A /* ApiClient.swift */,
+				8A59C70B2727321600875A5C /* RemoteApiLoaders */,
+				8AAFB8782725DF510001673A /* RemoteApiClient.swift */,
 			);
-			path = ApiClient;
+			path = RemoteApiClient;
 			sourceTree = "<group>";
 		};
 		8AAFB87A2725DFF20001673A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8A59C7142727D69200875A5C /* HorsesTodayLoader.swift */,
 				8AAFB87B2725E0040001673A /* HorsesTodayViewModel.swift */,
 			);
 			path = ViewModel;
@@ -241,6 +290,7 @@
 		8AAFB8842725E4FD0001673A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8A59C7162727D86000875A5C /* HorsesTodayDetailsLoader.swift */,
 				8AAFB8822725E4F80001673A /* HorsesTodayDetailViewModel.swift */,
 			);
 			path = ViewModel;
@@ -304,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A64FFFF272861D800116737 /* horsesTodayDetail.json in Resources */,
 				8A6139CE271A2D4D00FBD5F5 /* Preview Assets.xcassets in Resources */,
 				8A6139CB271A2D4D00FBD5F5 /* Assets.xcassets in Resources */,
 				8A6139D5271B73D800FBD5F5 /* horsesToday.json in Resources */,
@@ -320,17 +371,22 @@
 				8A6139D7271B753100FBD5F5 /* Horse.swift in Sources */,
 				8AC03901271B872D00DF27AD /* CircleImage.swift in Sources */,
 				8A59C7152727D69200875A5C /* HorsesTodayLoader.swift in Sources */,
-				8A59C70F272732B300875A5C /* HorsesTodayDetailsAdapter.swift in Sources */,
-				8AAFB8862725E5450001673A /* ApiClient+HorsesTodayDetailExtention.swift in Sources */,
+				8A59C71F2727DC7600875A5C /* LocalApiHorsesTodayLoader.swift in Sources */,
+				8A59C71B2727DC1F00875A5C /* LocalApiClient.swift in Sources */,
+				8A59C70F272732B300875A5C /* RemoteApiHorsesTodayDetailsLoader.swift in Sources */,
+				8AAFB8862725E5450001673A /* RemoteApiClient+HorsesTodayDetailExtention.swift in Sources */,
 				8AAFB87C2725E0040001673A /* HorsesTodayViewModel.swift in Sources */,
-				8AAFB8792725DF510001673A /* ApiClient.swift in Sources */,
+				8AAFB8792725DF510001673A /* RemoteApiClient.swift in Sources */,
 				8A6139D9271B77E100FBD5F5 /* ModelData.swift in Sources */,
-				8AAFB87E2725E0480001673A /* ApiClient+HorsesTodayExtention.swift in Sources */,
+				8AAFB87E2725E0480001673A /* RemoteApiClient+HorsesTodayExtention.swift in Sources */,
 				8A59C7172727D86000875A5C /* HorsesTodayDetailsLoader.swift in Sources */,
+				8A59C7232727DD0B00875A5C /* LocalApiHorsesTodayDetailsLoader.swift in Sources */,
 				8AAFB8832725E4F80001673A /* HorsesTodayDetailViewModel.swift in Sources */,
+				8A59C7252727DD3300875A5C /* LocalApiClient+HorsesTodayDetailsExtention.swift in Sources */,
 				8A6139C9271A2D4C00FBD5F5 /* ContentView.swift in Sources */,
 				8A6139DE271B78DF00FBD5F5 /* HorsesTodayRow.swift in Sources */,
-				8A59C70D2727322500875A5C /* HorsesTodayAdapter.swift in Sources */,
+				8A59C70D2727322500875A5C /* RemoteApiHorsesTodayLoader.swift in Sources */,
+				8A59C7212727DCB800875A5C /* LocalApiClient+HorsesTodayExtention.swift in Sources */,
 				8A6139C7271A2D4C00FBD5F5 /* HorsePlannerApp.swift in Sources */,
 				8AC038FF271B85BB00DF27AD /* HorsesTodayDetail.swift in Sources */,
 				8AAFB8812725E1260001673A /* Arbitrary.swift in Sources */,

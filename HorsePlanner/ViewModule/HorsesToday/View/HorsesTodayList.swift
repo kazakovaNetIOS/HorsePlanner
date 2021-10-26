@@ -13,7 +13,7 @@ struct HorsesTodayList: View {
     var body: some View {
         NavigationView {
             List(horses) { horse in
-                NavigationLink(destination: HorsesTodayDetail(horse: horse)) {
+                NavigationLink(destination: HorsesTodayDetail(horse: globalHorse)) {
                     HorsesTodayRow(horse: horse)
                 }
             }

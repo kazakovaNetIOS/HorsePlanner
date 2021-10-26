@@ -7,9 +7,10 @@
 
 import Foundation
 
-let horses: [Horse] = load("horsesToday.json")
+let horses: [Horse] = loadGlobal("horsesToday.json")
+let globalHorse: Horse = loadGlobal("horsesTodayDetail.json")
 
-func load<T: Decodable>(_ filename: String) -> T {
+func loadGlobal<T: Decodable>(_ filename: String) -> T {
     let data: Data
     
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)

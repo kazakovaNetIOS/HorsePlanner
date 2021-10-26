@@ -1,5 +1,5 @@
 //
-//  ApiClient+HorsesTodayExtention.swift
+//  RemoteApiClient+HorsesTodayExtention.swift
 //  HorsePlanner
 //
 //  Created by Kazakova Nataliya on 24.10.2021.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-extension ApiClient {
+extension RemoteApiClient {
     func loadHorsesToday(completion: ([Horse]) -> Void) {
-        print("api.loadHorsesToday process")
+        print("remoteApiClient.loadHorsesToday process")
         completion([.arbitrary(id: 1), .arbitrary(id: 2)])
     }
 }
