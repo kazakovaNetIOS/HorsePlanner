@@ -8,11 +8,11 @@
 import Foundation
 
 struct HorsesTodayDetailViewModel {
-    var loadHorsesTodayDetail: ((Result<Horse>) -> Void)?
+    var loader: HorsesTodayDetailsLoader?
     
     func initialize() {
-        loadHorsesTodayDetail? { horse in
-            print("loadHorsesTodayDetail completion", horse)
+        loader?.loadHorsesTodayDetails { horse in
+            print("loadHorsesTodayDetails completion", horse)
         }
     }
 }

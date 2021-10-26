@@ -8,8 +8,8 @@
 import Foundation
 
 extension ApiClient {
-    func loadHorsesTodayDetail(completion: (Horse) -> Void) {
-        print("loadHorsesTodayDetail process")
+    func loadHorsesTodayDetails(completion: (Horse) -> Void) {
+        print("api.loadHorsesTodayDetail process")
         completion(.arbitrary(id: 1))
     }
 }

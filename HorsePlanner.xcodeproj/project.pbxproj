@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8A59C70D2727322500875A5C /* HorsesTodayAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59C70C2727322500875A5C /* HorsesTodayAdapter.swift */; };
-		8A59C70F272732B300875A5C /* HorsesTodayDetailAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59C70E272732B300875A5C /* HorsesTodayDetailAdapter.swift */; };
+		8A59C70F272732B300875A5C /* HorsesTodayDetailsAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59C70E272732B300875A5C /* HorsesTodayDetailsAdapter.swift */; };
+		8A59C7152727D69200875A5C /* HorsesTodayLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59C7142727D69200875A5C /* HorsesTodayLoader.swift */; };
+		8A59C7172727D86000875A5C /* HorsesTodayDetailsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A59C7162727D86000875A5C /* HorsesTodayDetailsLoader.swift */; };
 		8A6139C7271A2D4C00FBD5F5 /* HorsePlannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6139C6271A2D4C00FBD5F5 /* HorsePlannerApp.swift */; };
 		8A6139C9271A2D4C00FBD5F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6139C8271A2D4C00FBD5F5 /* ContentView.swift */; };
 		8A6139CB271A2D4D00FBD5F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A6139CA271A2D4D00FBD5F5 /* Assets.xcassets */; };
@@ -30,7 +32,9 @@
 
 /* Begin PBXFileReference section */
 		8A59C70C2727322500875A5C /* HorsesTodayAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTodayAdapter.swift; sourceTree = "<group>"; };
-		8A59C70E272732B300875A5C /* HorsesTodayDetailAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTodayDetailAdapter.swift; sourceTree = "<group>"; };
+		8A59C70E272732B300875A5C /* HorsesTodayDetailsAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTodayDetailsAdapter.swift; sourceTree = "<group>"; };
+		8A59C7142727D69200875A5C /* HorsesTodayLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTodayLoader.swift; sourceTree = "<group>"; };
+		8A59C7162727D86000875A5C /* HorsesTodayDetailsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTodayDetailsLoader.swift; sourceTree = "<group>"; };
 		8A6139C3271A2D4C00FBD5F5 /* HorsePlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorsePlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A6139C6271A2D4C00FBD5F5 /* HorsePlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsePlannerApp.swift; sourceTree = "<group>"; };
 		8A6139C8271A2D4C00FBD5F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 		8A59C7102727333500875A5C /* HorsesToday */ = {
 			isa = PBXGroup;
 			children = (
+				8A59C7142727D69200875A5C /* HorsesTodayLoader.swift */,
 				8A59C70C2727322500875A5C /* HorsesTodayAdapter.swift */,
 				8AAFB87D2725E0480001673A /* ApiClient+HorsesTodayExtention.swift */,
 			);
@@ -92,7 +97,8 @@
 		8A59C7112727334000875A5C /* HorsesTodayDetail */ = {
 			isa = PBXGroup;
 			children = (
-				8A59C70E272732B300875A5C /* HorsesTodayDetailAdapter.swift */,
+				8A59C7162727D86000875A5C /* HorsesTodayDetailsLoader.swift */,
+				8A59C70E272732B300875A5C /* HorsesTodayDetailsAdapter.swift */,
 				8AAFB8852725E5450001673A /* ApiClient+HorsesTodayDetailExtention.swift */,
 			);
 			path = HorsesTodayDetail;
@@ -313,12 +319,14 @@
 			files = (
 				8A6139D7271B753100FBD5F5 /* Horse.swift in Sources */,
 				8AC03901271B872D00DF27AD /* CircleImage.swift in Sources */,
-				8A59C70F272732B300875A5C /* HorsesTodayDetailAdapter.swift in Sources */,
+				8A59C7152727D69200875A5C /* HorsesTodayLoader.swift in Sources */,
+				8A59C70F272732B300875A5C /* HorsesTodayDetailsAdapter.swift in Sources */,
 				8AAFB8862725E5450001673A /* ApiClient+HorsesTodayDetailExtention.swift in Sources */,
 				8AAFB87C2725E0040001673A /* HorsesTodayViewModel.swift in Sources */,
 				8AAFB8792725DF510001673A /* ApiClient.swift in Sources */,
 				8A6139D9271B77E100FBD5F5 /* ModelData.swift in Sources */,
 				8AAFB87E2725E0480001673A /* ApiClient+HorsesTodayExtention.swift in Sources */,
+				8A59C7172727D86000875A5C /* HorsesTodayDetailsLoader.swift in Sources */,
 				8AAFB8832725E4F80001673A /* HorsesTodayDetailViewModel.swift in Sources */,
 				8A6139C9271A2D4C00FBD5F5 /* ContentView.swift in Sources */,
 				8A6139DE271B78DF00FBD5F5 /* HorsesTodayRow.swift in Sources */,

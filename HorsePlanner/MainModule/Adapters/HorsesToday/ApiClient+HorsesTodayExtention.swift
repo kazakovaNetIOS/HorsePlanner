@@ -9,7 +9,7 @@ import Foundation
 
 extension ApiClient {
     func loadHorsesToday(completion: ([Horse]) -> Void) {
-        print("loadHorsesToday process")
+        print("api.loadHorsesToday process")
         completion([.arbitrary(id: 1), .arbitrary(id: 2)])
     }
 }

@@ -7,14 +7,13 @@
 
 import Foundation
 
-struct HorsesTodayAdapter {
+struct HorsesTodayAdapter: HorsesTodayLoader {
     var api: ApiClient
     
-    func loadHorsesToday() {
+    func loadHorsesToday(completion: @escaping ([Horse]) -> Void) {
+        print("horsesTodayAdapter.loadHorsesToday process")
         api.loadHorsesToday { horses in
-            _ = HorsesTodayViewModel { completion in
-                completion(horses)
-            }
+            completion(horses)
         }
     }
 }
