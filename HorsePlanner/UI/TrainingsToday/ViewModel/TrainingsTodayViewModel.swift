@@ -12,7 +12,7 @@ class TrainingsTodayViewModel {
     var horses: [Horse]?
     
     func initialize() {
-        loader?.loadTrainingsToday {[weak self] horses in
+        loader?.load {[weak self] horses in
             print("loadTrainingsToday completion", horses)
             self?.horses = horses
         }

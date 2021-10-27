@@ -35,6 +35,7 @@
 		8AC038FD271B7F3100DF27AD /* TrainingsTodayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC038FC271B7F3100DF27AD /* TrainingsTodayList.swift */; };
 		8AC038FF271B85BB00DF27AD /* TrainingsTodayDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC038FE271B85BB00DF27AD /* TrainingsTodayDetail.swift */; };
 		8AC03901271B872D00DF27AD /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC03900271B872D00DF27AD /* CircleImage.swift */; };
+		8ACCB5202729F6E300D53748 /* TrainingsTodayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACCB51F2729F6E300D53748 /* TrainingsTodayItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		8AC038FC271B7F3100DF27AD /* TrainingsTodayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsTodayList.swift; sourceTree = "<group>"; };
 		8AC038FE271B85BB00DF27AD /* TrainingsTodayDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsTodayDetail.swift; sourceTree = "<group>"; };
 		8AC03900271B872D00DF27AD /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		8ACCB51F2729F6E300D53748 /* TrainingsTodayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsTodayItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		8A6139C5271A2D4C00FBD5F5 /* HorsePlanner */ = {
 			isa = PBXGroup;
 			children = (
+				8ACCB51E2729F62E00D53748 /* TrainingsTodayFeature */,
 				8A6400092728663600116737 /* Composer */,
 				8A59C70A272731D900875A5C /* API */,
 				8A59C7182727DB2E00875A5C /* UI */,
@@ -277,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				8AAFB87B2725E0040001673A /* TrainingsTodayViewModel.swift */,
-				8A59C7142727D69200875A5C /* TrainingsTodayLoader.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -297,6 +299,15 @@
 				8A59C7162727D86000875A5C /* TrainingsTodayDetailsLoader.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8ACCB51E2729F62E00D53748 /* TrainingsTodayFeature */ = {
+			isa = PBXGroup;
+			children = (
+				8A59C7142727D69200875A5C /* TrainingsTodayLoader.swift */,
+				8ACCB51F2729F6E300D53748 /* TrainingsTodayItem.swift */,
+			);
+			path = TrainingsTodayFeature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +401,7 @@
 				8A6139C9271A2D4C00FBD5F5 /* ContentView.swift in Sources */,
 				8A6139DE271B78DF00FBD5F5 /* TrainingsTodayRow.swift in Sources */,
 				8A59C70D2727322500875A5C /* RemoteTrainingsTodayLoader.swift in Sources */,
+				8ACCB5202729F6E300D53748 /* TrainingsTodayItem.swift in Sources */,
 				8A59C7212727DCB800875A5C /* LocalApiClient+TrainingsTodayExtention.swift in Sources */,
 				8A6139C7271A2D4C00FBD5F5 /* HorsePlannerApp.swift in Sources */,
 				8AC038FF271B85BB00DF27AD /* TrainingsTodayDetail.swift in Sources */,

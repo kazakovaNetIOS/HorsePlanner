@@ -10,7 +10,7 @@ import Foundation
 struct RemoteTrainingsTodayLoader: TrainingsTodayLoader {
     private var api: RemoteApiClient
     
-    func loadTrainingsToday(completion: @escaping ([Horse]) -> Void) {
+    func load(completion: @escaping ([Horse]) -> Void) {
         print("remoteTrainingsTodayLoader.loadTrainingsToday process")
         api.loadTrainingsToday { horses in
             completion(horses)

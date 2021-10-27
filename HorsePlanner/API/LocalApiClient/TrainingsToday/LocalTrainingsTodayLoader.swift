@@ -10,7 +10,7 @@ import Foundation
 struct LocalTrainingsTodayLoader: TrainingsTodayLoader {
     private var api: LocalApiClient
     
-    func loadTrainingsToday(completion: @escaping ([Horse]) -> Void) {
+    func load(completion: @escaping ([Horse]) -> Void) {
         print("localApiTrainingsTodayLoader.loadTrainingsToday process")
         api.loadTrainingsToday { horses in
             completion(horses)

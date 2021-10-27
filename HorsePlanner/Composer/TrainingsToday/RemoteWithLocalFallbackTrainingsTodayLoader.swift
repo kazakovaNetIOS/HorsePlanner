@@ -22,9 +22,9 @@ class RemoteWithLocalFallbackTrainingsTodayLoader {
 }
 
 extension RemoteWithLocalFallbackTrainingsTodayLoader: TrainingsTodayLoader {
-    func loadTrainingsToday(completion: @escaping([Horse]) -> Void) {
+    func load(completion: @escaping([Horse]) -> Void) {
         let load =  Reachability.networkAvailable ?
-        remote.loadTrainingsToday : local.loadTrainingsToday
+        remote.load : local.load
         
         load(completion)
     }
