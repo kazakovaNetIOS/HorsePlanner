@@ -12,8 +12,8 @@ struct TrainingsTodayList: View {
     
     var body: some View {
         NavigationView {
-            List(horses) { horse in
-                NavigationLink(destination: TrainingsTodayDetail(horse: globalHorse)) {
+            List(viewModel.horses ?? []) { horse in
+                NavigationLink(destination: TrainingsTodayDetail(viewModel: .init())) {
                     TrainingsTodayRow(horse: horse)
                 }
             }

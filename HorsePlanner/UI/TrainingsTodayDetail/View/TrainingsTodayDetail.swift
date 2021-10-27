@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct TrainingsTodayDetail: View {
-    let horse: Horse
+    let viewModel: TrainingsTodayDetailViewModel
     
     var body: some View {
         VStack {
-            CircleImage(image: horse.image)
-            Text("\(horse.name), \(horse.age) age")
+            CircleImage(image: viewModel.horse?.image ?? Image(systemName: "photo"))
+            Text("\(viewModel.horse?.name ?? ""), \(viewModel.horse?.age ?? 0) age")
                 .font(.title)
                 .padding(.bottom)
-            Text(horse.owner)
+            Text(viewModel.horse?.owner ?? "")
                 .font(.subheadline)
                 .foregroundColor(.gray)
             Spacer()
@@ -26,6 +26,6 @@ struct TrainingsTodayDetail: View {
 
 struct HorseDetail_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingsTodayDetail(horse: horses[0])
+        TrainingsTodayDetail(viewModel: .init())
     }
 }

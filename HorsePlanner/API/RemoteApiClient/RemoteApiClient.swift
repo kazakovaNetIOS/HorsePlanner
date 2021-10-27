@@ -11,7 +11,9 @@ class RemoteApiClient {
     static let shared = RemoteApiClient()
     private init() {}
     
-    func execute(_: URLRequest, completion: @escaping (Data) -> Void) {}
+    func execute<T: Decodable>(_: URLRequest, completion: @escaping (T) -> Void) {
+        // some work from api
+    }
 }
 
 

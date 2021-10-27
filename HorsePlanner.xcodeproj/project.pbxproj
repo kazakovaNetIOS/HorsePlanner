@@ -80,13 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8A59C70A272731D900875A5C /* ApiModule */ = {
+		8A59C70A272731D900875A5C /* API */ = {
 			isa = PBXGroup;
 			children = (
 				8A59C7192727DBDC00875A5C /* LocalApiClient */,
 				8AAFB8772725DF430001673A /* RemoteApiClient */,
+				8A6139DC271B78A500FBD5F5 /* Models */,
 			);
-			path = ApiModule;
+			path = API;
 			sourceTree = "<group>";
 		};
 		8A59C7102727333500875A5C /* TrainingsToday */ = {
@@ -98,20 +99,21 @@
 			path = TrainingsToday;
 			sourceTree = "<group>";
 		};
-		8A59C7182727DB2E00875A5C /* ViewModule */ = {
+		8A59C7182727DB2E00875A5C /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				8AAFB872272578400001673A /* TrainingsToday */,
 				8AAFB874272578650001673A /* TrainingsTodayDetail */,
+				8AAFB8762725DEA30001673A /* CommonViews */,
 			);
-			path = ViewModule;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		8A59C7192727DBDC00875A5C /* LocalApiClient */ = {
 			isa = PBXGroup;
 			children = (
 				8A59C71C2727DC3900875A5C /* TrainingsToday */,
-				8A59C71D2727DC4500875A5C /* HorsesTodayDetails */,
+				8A59C71D2727DC4500875A5C /* TrainingsTodayDetails */,
 				8A59C71A2727DC1F00875A5C /* LocalApiClient.swift */,
 			);
 			path = LocalApiClient;
@@ -126,13 +128,13 @@
 			path = TrainingsToday;
 			sourceTree = "<group>";
 		};
-		8A59C71D2727DC4500875A5C /* HorsesTodayDetails */ = {
+		8A59C71D2727DC4500875A5C /* TrainingsTodayDetails */ = {
 			isa = PBXGroup;
 			children = (
 				8A59C7222727DD0B00875A5C /* LocalApiTrainingsTodayDetailsLoader.swift */,
 				8A59C7242727DD3300875A5C /* LocalApiClient+TrainingsTodayDetailsExtention.swift */,
 			);
-			path = HorsesTodayDetails;
+			path = TrainingsTodayDetails;
 			sourceTree = "<group>";
 		};
 		8A6139BA271A2D4C00FBD5F5 = {
@@ -154,15 +156,12 @@
 		8A6139C5271A2D4C00FBD5F5 /* HorsePlanner */ = {
 			isa = PBXGroup;
 			children = (
-				8A6400092728663600116737 /* Services */,
-				8A59C70A272731D900875A5C /* ApiModule */,
-				8A59C7182727DB2E00875A5C /* ViewModule */,
-				8AAFB87F2725E1110001673A /* DummyHelpers */,
-				8AAFB8762725DEA30001673A /* CommonViews */,
+				8A6400092728663600116737 /* Composer */,
+				8A59C70A272731D900875A5C /* API */,
+				8A59C7182727DB2E00875A5C /* UI */,
 				8A6139C6271A2D4C00FBD5F5 /* HorsePlannerApp.swift */,
-				8A6139DA271B787D00FBD5F5 /* Views */,
+				8A6139C8271A2D4C00FBD5F5 /* ContentView.swift */,
 				8A6139DB271B788D00FBD5F5 /* Resources */,
-				8A6139DC271B78A500FBD5F5 /* Model */,
 				8A6139CA271A2D4D00FBD5F5 /* Assets.xcassets */,
 				8A6139CC271A2D4D00FBD5F5 /* Preview Content */,
 			);
@@ -177,14 +176,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		8A6139DA271B787D00FBD5F5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8A6139C8271A2D4C00FBD5F5 /* ContentView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		8A6139DB271B788D00FBD5F5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,13 +185,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		8A6139DC271B78A500FBD5F5 /* Model */ = {
+		8A6139DC271B78A500FBD5F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				8A6139D6271B753100FBD5F5 /* Horse.swift */,
 				8A6139D8271B77E100FBD5F5 /* ModelData.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8A640002272864BC00116737 /* TrainingsTodayDetails */ = {
@@ -212,12 +203,12 @@
 			path = TrainingsTodayDetails;
 			sourceTree = "<group>";
 		};
-		8A6400092728663600116737 /* Services */ = {
+		8A6400092728663600116737 /* Composer */ = {
 			isa = PBXGroup;
 			children = (
 				8A64000A2728663F00116737 /* TrainingsToday */,
 			);
-			path = Services;
+			path = Composer;
 			sourceTree = "<group>";
 		};
 		8A64000A2728663F00116737 /* TrainingsToday */ = {
@@ -274,6 +265,7 @@
 		8AAFB8772725DF430001673A /* RemoteApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				8AAFB87F2725E1110001673A /* DummyHelpers */,
 				8A59C7102727333500875A5C /* TrainingsToday */,
 				8A640002272864BC00116737 /* TrainingsTodayDetails */,
 				8AAFB8782725DF510001673A /* RemoteApiClient.swift */,
@@ -284,8 +276,8 @@
 		8AAFB87A2725DFF20001673A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				8A59C7142727D69200875A5C /* TrainingsTodayLoader.swift */,
 				8AAFB87B2725E0040001673A /* TrainingsTodayViewModel.swift */,
+				8A59C7142727D69200875A5C /* TrainingsTodayLoader.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -301,8 +293,8 @@
 		8AAFB8842725E4FD0001673A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				8A59C7162727D86000875A5C /* TrainingsTodayDetailsLoader.swift */,
 				8AAFB8822725E4F80001673A /* TrainingsTodayDetailViewModel.swift */,
+				8A59C7162727D86000875A5C /* TrainingsTodayDetailsLoader.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

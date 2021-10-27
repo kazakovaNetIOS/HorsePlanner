@@ -7,12 +7,14 @@
 
 import Foundation
 
-struct TrainingsTodayViewModel {
+class TrainingsTodayViewModel {
     var loader: TrainingsTodayLoader?
+    var horses: [Horse]?
     
     func initialize() {
-        loader?.loadTrainingsToday { horses in
+        loader?.loadTrainingsToday {[weak self] horses in
             print("loadTrainingsToday completion", horses)
+            self?.horses = horses
         }
     }
 }

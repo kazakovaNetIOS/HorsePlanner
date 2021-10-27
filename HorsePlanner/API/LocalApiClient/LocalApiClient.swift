@@ -8,6 +8,9 @@
 import Foundation
 
 class LocalApiClient {
+    static let shared = LocalApiClient()
+    private init() {}
+    
     func load<T: Decodable>(from filename: String) -> T {
         let data: Data
         
