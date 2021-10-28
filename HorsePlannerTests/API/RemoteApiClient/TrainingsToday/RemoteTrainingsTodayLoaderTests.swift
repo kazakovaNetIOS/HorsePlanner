@@ -19,21 +19,25 @@ import XCTest
 //}
 
 class RemoteTrainingsTodayLoader{
+    let client: HTTPClient
+    
+    init(client: HTTPClient) {
+        self.client = client
+    }
+    
     func load() {
-        HTTPClient.shared.get(from: URL(string: "http://a-url.com")!)
+        client.get(from: URL(string: "http://a-url.com")!)
     }
 }
 
-class HTTPClient {
-    static var shared = HTTPClient()
-    
-    func get(from url: URL) {}
+protocol HTTPClient {
+    func get(from url: URL)
 }
 
 class HTTPClientSpy: HTTPClient {
     var requestedURL: URL?
     
-    override func get(from url: URL) {
+     func get(from url: URL) {
         requestedURL = url
     }
 }
@@ -42,16 +46,14 @@ class RemoteTrainingsTodayLoaderTests: XCTestCase {
     
     func test_init_doesNotRequestDataFromURL() {
         let client = HTTPClientSpy()
-        HTTPClient.shared = client
-        _ = RemoteTrainingsTodayLoader()
+        _ = RemoteTrainingsTodayLoader(client: client)
         
         XCTAssertNil(client.requestedURL)
     }
     
     func test_load_requestDataFromURL(){
         let client = HTTPClientSpy()
-        HTTPClient.shared = client
-        let sut = RemoteTrainingsTodayLoader()
+        let sut = RemoteTrainingsTodayLoader(client: client)
         
         sut.load()
         
