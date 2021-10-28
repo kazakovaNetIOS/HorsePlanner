@@ -37,12 +37,10 @@ class RemoteTrainingsTodayLoaderTests: XCTestCase {
     func test_load_deliversErrorOnCLientsError() {
         let (sut, client) = makeSUT()
         client.error = NSError(domain: "Test", code: 0)
-        var capturedError: RemoteTrainingsTodayLoader.Error?
-        sut.load { error in
-            capturedError = error
-        }
+        var capturedErrors = [RemoteTrainingsTodayLoader.Error]()
+        sut.load { capturedErrors.append($0) }
         
-        XCTAssertEqual(capturedError, .connectivity)
+        XCTAssertEqual(capturedErrors, [.connectivity])
     }
     
     // MARK: - Helpers
@@ -63,7 +61,7 @@ class RemoteTrainingsTodayLoaderTests: XCTestCase {
             if let error = error {
                 completion(error)
             }
-            requestedURLs.append(url)            
+            requestedURLs.append(url)
         }
     }
 }
