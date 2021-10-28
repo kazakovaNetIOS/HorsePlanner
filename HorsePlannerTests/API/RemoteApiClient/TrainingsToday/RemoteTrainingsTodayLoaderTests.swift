@@ -20,13 +20,16 @@ import XCTest
 
 class RemoteTrainingsTodayLoader{
     let client: HTTPClient
+    let url: URL
     
-    init(client: HTTPClient) {
+    init(url: URL,
+         client: HTTPClient) {
+        self.url = url
         self.client = client
     }
     
     func load() {
-        client.get(from: URL(string: "http://a-url.com")!)
+        client.get(from: url)
     }
 }
 
@@ -45,19 +48,21 @@ class HTTPClientSpy: HTTPClient {
 class RemoteTrainingsTodayLoaderTests: XCTestCase {
     
     func test_init_doesNotRequestDataFromURL() {
+        let url = URL(string: "http://a-givenw-url.com")!
         let client = HTTPClientSpy()
-        _ = RemoteTrainingsTodayLoader(client: client)
+        _ = RemoteTrainingsTodayLoader(url: url, client: client)
         
         XCTAssertNil(client.requestedURL)
     }
     
-    func test_load_requestDataFromURL(){
+    func test_load_requestDataFromURL() {
+        let url = URL(string: "http://a-givenw-url.com")!
         let client = HTTPClientSpy()
-        let sut = RemoteTrainingsTodayLoader(client: client)
+        let sut = RemoteTrainingsTodayLoader(url: url, client: client)
         
         sut.load()
         
-        XCTAssertNotNil(client.requestedURL)
+        XCTAssertEqual(client.requestedURL, url)
     }
 
 }
