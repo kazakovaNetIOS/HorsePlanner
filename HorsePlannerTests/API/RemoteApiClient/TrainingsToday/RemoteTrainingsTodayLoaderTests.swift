@@ -6,36 +6,7 @@
 //
 
 import XCTest
-
-//struct RemoteTrainingsTodayLoader: TrainingsTodayLoader {
-//    private var api: RemoteApiClient
-//
-//    func load(completion: @escaping ([Horse]) -> Void) {
-//        print("remoteTrainingsTodayLoader.loadTrainingsToday process")
-//        api.loadTrainingsToday { horses in
-//            completion(horses)
-//        }
-//    }
-//}
-
-class RemoteTrainingsTodayLoader{
-    let client: HTTPClient
-    let url: URL
-    
-    init(url: URL,
-         client: HTTPClient) {
-        self.url = url
-        self.client = client
-    }
-    
-    func load() {
-        client.get(from: url)
-    }
-}
-
-protocol HTTPClient {
-    func get(from url: URL)
-}
+import HorsePlanner
 
 class RemoteTrainingsTodayLoaderTests: XCTestCase {
     

@@ -12,10 +12,10 @@ struct Reachability {
 }
 
 class RemoteWithLocalFallbackTrainingsTodayLoader {
-    let remote: RemoteTrainingsTodayLoader
+    let remote: RemoteTrainingsTodayLoader1
     let local: LocalTrainingsTodayLoader
     
-    init(remote: RemoteTrainingsTodayLoader, local: LocalTrainingsTodayLoader) {
+    init(remote: RemoteTrainingsTodayLoader1, local: LocalTrainingsTodayLoader) {
         self.remote = remote
         self.local = local
     }
