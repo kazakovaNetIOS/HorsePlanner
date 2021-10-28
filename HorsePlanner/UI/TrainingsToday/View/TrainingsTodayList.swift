@@ -12,12 +12,12 @@ struct TrainingsTodayList: View {
     
     var body: some View {
         NavigationView {
-            List(viewModel.horses ?? []) { horse in
-                NavigationLink(destination: TrainingsTodayDetail(viewModel: .init())) {
-                    TrainingsTodayRow(horse: horse)
-                }
-            }
-            .navigationTitle("Trainings Today")
+//            List(viewModel.horses ?? []) { horse in
+//                NavigationLink(destination: TrainingsTodayDetail(viewModel: .init())) {
+//                    TrainingsTodayRow(horse: horse)
+//                }
+//            }
+//            .navigationTitle("Trainings Today")
         }
     }
 }

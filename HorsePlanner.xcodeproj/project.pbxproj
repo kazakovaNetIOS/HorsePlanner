@@ -27,6 +27,8 @@
 		8A640006272864F200116737 /* RemoteApiClient+TrainingsTodayDetailExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A640004272864F200116737 /* RemoteApiClient+TrainingsTodayDetailExtention.swift */; };
 		8A6400082728655800116737 /* RemoteWithLocalFallbackTrainingsTodayLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6400072728655800116737 /* RemoteWithLocalFallbackTrainingsTodayLoader.swift */; };
 		8A64FFFF272861D800116737 /* TrainingsTodayDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A59C7262727E9AD00875A5C /* TrainingsTodayDetail.json */; };
+		8A83CDE8272B2D2E00AE1722 /* HorsePlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A83CDE7272B2D2E00AE1722 /* HorsePlannerTests.swift */; };
+		8A83CDF2272B2D7900AE1722 /* RemoteTrainingsTodayLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A83CDF1272B2D7900AE1722 /* RemoteTrainingsTodayLoaderTests.swift */; };
 		8AAFB8792725DF510001673A /* RemoteApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB8782725DF510001673A /* RemoteApiClient.swift */; };
 		8AAFB87C2725E0040001673A /* TrainingsTodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB87B2725E0040001673A /* TrainingsTodayViewModel.swift */; };
 		8AAFB87E2725E0480001673A /* RemoteApiClient+TrainingsTodayExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB87D2725E0480001673A /* RemoteApiClient+TrainingsTodayExtention.swift */; };
@@ -37,6 +39,16 @@
 		8AC03901271B872D00DF27AD /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC03900271B872D00DF27AD /* CircleImage.swift */; };
 		8ACCB5202729F6E300D53748 /* TrainingsTodayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACCB51F2729F6E300D53748 /* TrainingsTodayItem.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A83CDE9272B2D2E00AE1722 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A6139BB271A2D4C00FBD5F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A6139C2271A2D4C00FBD5F5;
+			remoteInfo = HorsePlanner;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8A59C70C2727322500875A5C /* RemoteTrainingsTodayLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTrainingsTodayLoader.swift; sourceTree = "<group>"; };
@@ -60,6 +72,9 @@
 		8A640003272864F200116737 /* RemoteApiTrainingsTodayDetailsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteApiTrainingsTodayDetailsLoader.swift; sourceTree = "<group>"; };
 		8A640004272864F200116737 /* RemoteApiClient+TrainingsTodayDetailExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RemoteApiClient+TrainingsTodayDetailExtention.swift"; sourceTree = "<group>"; };
 		8A6400072728655800116737 /* RemoteWithLocalFallbackTrainingsTodayLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWithLocalFallbackTrainingsTodayLoader.swift; sourceTree = "<group>"; };
+		8A83CDE5272B2D2E00AE1722 /* HorsePlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HorsePlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A83CDE7272B2D2E00AE1722 /* HorsePlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsePlannerTests.swift; sourceTree = "<group>"; };
+		8A83CDF1272B2D7900AE1722 /* RemoteTrainingsTodayLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTrainingsTodayLoaderTests.swift; sourceTree = "<group>"; };
 		8AAFB8782725DF510001673A /* RemoteApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteApiClient.swift; sourceTree = "<group>"; };
 		8AAFB87B2725E0040001673A /* TrainingsTodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsTodayViewModel.swift; sourceTree = "<group>"; };
 		8AAFB87D2725E0480001673A /* RemoteApiClient+TrainingsTodayExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteApiClient+TrainingsTodayExtention.swift"; sourceTree = "<group>"; };
@@ -73,6 +88,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		8A6139C0271A2D4C00FBD5F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A83CDE2272B2D2E00AE1722 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -143,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				8A6139C5271A2D4C00FBD5F5 /* HorsePlanner */,
+				8A83CDE6272B2D2E00AE1722 /* HorsePlannerTests */,
 				8A6139C4271A2D4C00FBD5F5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -151,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				8A6139C3271A2D4C00FBD5F5 /* HorsePlanner.app */,
+				8A83CDE5272B2D2E00AE1722 /* HorsePlannerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,6 +242,39 @@
 			isa = PBXGroup;
 			children = (
 				8A6400072728655800116737 /* RemoteWithLocalFallbackTrainingsTodayLoader.swift */,
+			);
+			path = TrainingsToday;
+			sourceTree = "<group>";
+		};
+		8A83CDE6272B2D2E00AE1722 /* HorsePlannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A83CDEE272B2D3E00AE1722 /* API */,
+				8A83CDE7272B2D2E00AE1722 /* HorsePlannerTests.swift */,
+			);
+			path = HorsePlannerTests;
+			sourceTree = "<group>";
+		};
+		8A83CDEE272B2D3E00AE1722 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8A83CDEF272B2D4700AE1722 /* RemoteApiClient */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8A83CDEF272B2D4700AE1722 /* RemoteApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				8A83CDF0272B2D5800AE1722 /* TrainingsToday */,
+			);
+			path = RemoteApiClient;
+			sourceTree = "<group>";
+		};
+		8A83CDF0272B2D5800AE1722 /* TrainingsToday */ = {
+			isa = PBXGroup;
+			children = (
+				8A83CDF1272B2D7900AE1722 /* RemoteTrainingsTodayLoaderTests.swift */,
 			);
 			path = TrainingsToday;
 			sourceTree = "<group>";
@@ -330,6 +387,24 @@
 			productReference = 8A6139C3271A2D4C00FBD5F5 /* HorsePlanner.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8A83CDE4272B2D2E00AE1722 /* HorsePlannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A83CDED272B2D2E00AE1722 /* Build configuration list for PBXNativeTarget "HorsePlannerTests" */;
+			buildPhases = (
+				8A83CDE1272B2D2E00AE1722 /* Sources */,
+				8A83CDE2272B2D2E00AE1722 /* Frameworks */,
+				8A83CDE3272B2D2E00AE1722 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A83CDEA272B2D2E00AE1722 /* PBXTargetDependency */,
+			);
+			name = HorsePlannerTests;
+			productName = HorsePlannerTests;
+			productReference = 8A83CDE5272B2D2E00AE1722 /* HorsePlannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -342,6 +417,10 @@
 				TargetAttributes = {
 					8A6139C2271A2D4C00FBD5F5 = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					8A83CDE4272B2D2E00AE1722 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 8A6139C2271A2D4C00FBD5F5;
 					};
 				};
 			};
@@ -359,6 +438,7 @@
 			projectRoot = "";
 			targets = (
 				8A6139C2271A2D4C00FBD5F5 /* HorsePlanner */,
+				8A83CDE4272B2D2E00AE1722 /* HorsePlannerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -372,6 +452,13 @@
 				8A6139CE271A2D4D00FBD5F5 /* Preview Assets.xcassets in Resources */,
 				8A6139CB271A2D4D00FBD5F5 /* Assets.xcassets in Resources */,
 				8A6139D5271B73D800FBD5F5 /* TrainingsToday.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A83CDE3272B2D2E00AE1722 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +497,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8A83CDE1272B2D2E00AE1722 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A83CDF2272B2D7900AE1722 /* RemoteTrainingsTodayLoaderTests.swift in Sources */,
+				8A83CDE8272B2D2E00AE1722 /* HorsePlannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A83CDEA272B2D2E00AE1722 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A6139C2271A2D4C00FBD5F5 /* HorsePlanner */;
+			targetProxy = 8A83CDE9272B2D2E00AE1722 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8A6139CF271A2D4D00FBD5F5 /* Debug */ = {
@@ -589,6 +693,54 @@
 			};
 			name = Release;
 		};
+		8A83CDEB272B2D2E00AE1722 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SK5TU5YA87;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.kazakovanet.HorsePlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HorsePlanner.app/HorsePlanner";
+			};
+			name = Debug;
+		};
+		8A83CDEC272B2D2E00AE1722 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SK5TU5YA87;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ru.kazakovanet.HorsePlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HorsePlanner.app/HorsePlanner";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -606,6 +758,15 @@
 			buildConfigurations = (
 				8A6139D2271A2D4D00FBD5F5 /* Debug */,
 				8A6139D3271A2D4D00FBD5F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A83CDED272B2D2E00AE1722 /* Build configuration list for PBXNativeTarget "HorsePlannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A83CDEB272B2D2E00AE1722 /* Debug */,
+				8A83CDEC272B2D2E00AE1722 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

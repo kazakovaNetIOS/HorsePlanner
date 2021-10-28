@@ -8,8 +8,8 @@
 import Foundation
 
 extension RemoteApiClient {
-    func loadTrainingsToday(completion: ([Horse]) -> Void) {
+    func loadTrainingsToday(completion: (LoadTrainingsTodayResult) -> Void) {
         print("remoteApiClient.loadTrainingsToday process")
-        completion([.arbitrary(id: 1), .arbitrary(id: 2)])
+//        completion([.arbitrary(id: 1), .arbitrary(id: 2)])
     }
 }
