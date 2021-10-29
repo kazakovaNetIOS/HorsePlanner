@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TrainingsTodayItem {
+public struct TrainingsTodayItem: Equatable {
     let id: UUID
     let horseName: String
     let date: Date

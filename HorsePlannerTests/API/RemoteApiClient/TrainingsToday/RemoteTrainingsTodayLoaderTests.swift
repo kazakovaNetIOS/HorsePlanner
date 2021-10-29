@@ -79,12 +79,12 @@ class RemoteTrainingsTodayLoaderTests: XCTestCase {
                         when action: () -> Void,
                         file: StaticString = #filePath,
                         line: UInt = #line) {
-        var capturedErrors = [RemoteTrainingsTodayLoader.Error]()
-        sut.load { capturedErrors.append($0) }
+        var capturedResults = [RemoteTrainingsTodayLoader.Result]()
+        sut.load { capturedResults.append($0) }
         
         action()
         
-        XCTAssertEqual(capturedErrors, [error], file: file, line: line)
+        XCTAssertEqual(capturedResults, [.failure(error)], file: file, line: line)
     }
     
     private class HTTPClientSpy: HTTPClient {
