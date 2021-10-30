@@ -38,6 +38,7 @@
 		8AB8E6B4272C9B88002FEA5F /* DateFormatter+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8E6B3272C9B88002FEA5F /* DateFormatter+Extentions.swift */; };
 		8AB8E6B6272C9FE6002FEA5F /* Date+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8E6B5272C9FE6002FEA5F /* Date+Extentions.swift */; };
 		8AB8E6B8272D49DC002FEA5F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8E6B7272D49DC002FEA5F /* HTTPClient.swift */; };
+		8AB8E6BA272D4A30002FEA5F /* TrainingsTodayMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8E6B9272D4A30002FEA5F /* TrainingsTodayMapper.swift */; };
 		8AC038FD271B7F3100DF27AD /* TrainingsTodayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC038FC271B7F3100DF27AD /* TrainingsTodayList.swift */; };
 		8AC038FF271B85BB00DF27AD /* TrainingsTodayDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC038FE271B85BB00DF27AD /* TrainingsTodayDetail.swift */; };
 		8AC03901271B872D00DF27AD /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC03900271B872D00DF27AD /* CircleImage.swift */; };
@@ -88,6 +89,7 @@
 		8AB8E6B3272C9B88002FEA5F /* DateFormatter+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extentions.swift"; sourceTree = "<group>"; };
 		8AB8E6B5272C9FE6002FEA5F /* Date+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extentions.swift"; sourceTree = "<group>"; };
 		8AB8E6B7272D49DC002FEA5F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		8AB8E6B9272D4A30002FEA5F /* TrainingsTodayMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsTodayMapper.swift; sourceTree = "<group>"; };
 		8AC038FC271B7F3100DF27AD /* TrainingsTodayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsTodayList.swift; sourceTree = "<group>"; };
 		8AC038FE271B85BB00DF27AD /* TrainingsTodayDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsTodayDetail.swift; sourceTree = "<group>"; };
 		8AC03900271B872D00DF27AD /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 			children = (
 				8A83CDF4272B435D00AE1722 /* RemoteTrainingsTodayLoader.swift */,
 				8AB8E6B7272D49DC002FEA5F /* HTTPClient.swift */,
+				8AB8E6B9272D4A30002FEA5F /* TrainingsTodayMapper.swift */,
 			);
 			path = TrainingsTodayAPI;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				8A6139D9271B77E100FBD5F5 /* ModelData.swift in Sources */,
 				8AAFB87E2725E0480001673A /* RemoteApiClient+TrainingsTodayExtention.swift in Sources */,
 				8A59C7172727D86000875A5C /* TrainingsTodayDetailsLoader.swift in Sources */,
+				8AB8E6BA272D4A30002FEA5F /* TrainingsTodayMapper.swift in Sources */,
 				8A6400082728655800116737 /* RemoteWithLocalFallbackTrainingsTodayLoader.swift in Sources */,
 				8A640006272864F200116737 /* RemoteApiClient+TrainingsTodayDetailExtention.swift in Sources */,
 				8A59C7232727DD0B00875A5C /* LocalApiTrainingsTodayDetailsLoader.swift in Sources */,
