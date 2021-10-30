@@ -10,8 +10,12 @@ import Foundation
 internal final class TrainingsTodayMapper {
     private struct Root: Decodable {
         let items: [Item]
+        
+        var trainings: [TrainingsTodayItem] {
+            items.map { $0.item }
+        }
     }
-
+    
     private struct Item: Decodable {
         let id: UUID
         let horseName: String
@@ -28,14 +32,16 @@ internal final class TrainingsTodayMapper {
     
     private static var OK_200: Int { 200 }
     
-    internal static func map(_ data: Data, _ response: HTTPURLResponse) throws -> [TrainingsTodayItem] {
-        guard response.statusCode == OK_200 else {
-            throw RemoteTrainingsTodayLoader.Error.invalidData
-        }
+    internal static func map(_ data: Data,
+                             from response: HTTPURLResponse) -> RemoteTrainingsTodayLoader.Result {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted(DateFormatter.full)
         
-        let root = try decoder.decode(Root.self, from: data)
-        return root.items.map { $0.item }
+        guard response.statusCode == OK_200,
+              let root = try? decoder.decode(Root.self, from: data) else {
+                  return .failure(.invalidData)
+              }
+        
+        return .success(root.trainings)
     }
 }
