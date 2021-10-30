@@ -261,34 +261,18 @@
 		8A83CDE6272B2D2E00AE1722 /* HorsePlannerTests */ = {
 			isa = PBXGroup;
 			children = (
-				8A83CDEE272B2D3E00AE1722 /* API */,
+				8A83CDEF272B2D4700AE1722 /* TrainingsTodayAPI */,
 				8A83CDE7272B2D2E00AE1722 /* HorsePlannerTests.swift */,
 			);
 			path = HorsePlannerTests;
 			sourceTree = "<group>";
 		};
-		8A83CDEE272B2D3E00AE1722 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				8A83CDEF272B2D4700AE1722 /* RemoteApiClient */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		8A83CDEF272B2D4700AE1722 /* RemoteApiClient */ = {
-			isa = PBXGroup;
-			children = (
-				8A83CDF0272B2D5800AE1722 /* TrainingsToday */,
-			);
-			path = RemoteApiClient;
-			sourceTree = "<group>";
-		};
-		8A83CDF0272B2D5800AE1722 /* TrainingsToday */ = {
+		8A83CDEF272B2D4700AE1722 /* TrainingsTodayAPI */ = {
 			isa = PBXGroup;
 			children = (
 				8A83CDF1272B2D7900AE1722 /* RemoteTrainingsTodayLoaderTests.swift */,
 			);
-			path = TrainingsToday;
+			path = TrainingsTodayAPI;
 			sourceTree = "<group>";
 		};
 		8A83CDF3272B432600AE1722 /* TrainingsTodayAPI */ = {
