@@ -37,6 +37,7 @@
 		8AAFB8832725E4F80001673A /* TrainingsTodayDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB8822725E4F80001673A /* TrainingsTodayDetailViewModel.swift */; };
 		8AB8E6B4272C9B88002FEA5F /* DateFormatter+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8E6B3272C9B88002FEA5F /* DateFormatter+Extentions.swift */; };
 		8AB8E6B6272C9FE6002FEA5F /* Date+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8E6B5272C9FE6002FEA5F /* Date+Extentions.swift */; };
+		8AB8E6B8272D49DC002FEA5F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8E6B7272D49DC002FEA5F /* HTTPClient.swift */; };
 		8AC038FD271B7F3100DF27AD /* TrainingsTodayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC038FC271B7F3100DF27AD /* TrainingsTodayList.swift */; };
 		8AC038FF271B85BB00DF27AD /* TrainingsTodayDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC038FE271B85BB00DF27AD /* TrainingsTodayDetail.swift */; };
 		8AC03901271B872D00DF27AD /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC03900271B872D00DF27AD /* CircleImage.swift */; };
@@ -86,6 +87,7 @@
 		8AAFB8822725E4F80001673A /* TrainingsTodayDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsTodayDetailViewModel.swift; sourceTree = "<group>"; };
 		8AB8E6B3272C9B88002FEA5F /* DateFormatter+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extentions.swift"; sourceTree = "<group>"; };
 		8AB8E6B5272C9FE6002FEA5F /* Date+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extentions.swift"; sourceTree = "<group>"; };
+		8AB8E6B7272D49DC002FEA5F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		8AC038FC271B7F3100DF27AD /* TrainingsTodayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsTodayList.swift; sourceTree = "<group>"; };
 		8AC038FE271B85BB00DF27AD /* TrainingsTodayDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsTodayDetail.swift; sourceTree = "<group>"; };
 		8AC03900271B872D00DF27AD /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
@@ -188,7 +190,6 @@
 		8A6139C5271A2D4C00FBD5F5 /* HorsePlanner */ = {
 			isa = PBXGroup;
 			children = (
-				8AB8E6B2272C9B70002FEA5F /* Extentions */,
 				8ACCB51E2729F62E00D53748 /* TrainingsTodayFeature */,
 				8A83CDF3272B432600AE1722 /* TrainingsTodayAPI */,
 				8A6400092728663600116737 /* Composer */,
@@ -196,6 +197,7 @@
 				8A59C7182727DB2E00875A5C /* UI */,
 				8A6139C6271A2D4C00FBD5F5 /* HorsePlannerApp.swift */,
 				8A6139C8271A2D4C00FBD5F5 /* ContentView.swift */,
+				8AB8E6B2272C9B70002FEA5F /* Extentions */,
 				8A6139DB271B788D00FBD5F5 /* Resources */,
 				8A6139CA271A2D4D00FBD5F5 /* Assets.xcassets */,
 				8A6139CC271A2D4D00FBD5F5 /* Preview Content */,
@@ -291,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				8A83CDF4272B435D00AE1722 /* RemoteTrainingsTodayLoader.swift */,
+				8AB8E6B7272D49DC002FEA5F /* HTTPClient.swift */,
 			);
 			path = TrainingsTodayAPI;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				8AC03901271B872D00DF27AD /* CircleImage.swift in Sources */,
 				8AB8E6B4272C9B88002FEA5F /* DateFormatter+Extentions.swift in Sources */,
 				8A59C7152727D69200875A5C /* TrainingsTodayLoader.swift in Sources */,
+				8AB8E6B8272D49DC002FEA5F /* HTTPClient.swift in Sources */,
 				8A59C71F2727DC7600875A5C /* LocalTrainingsTodayLoader.swift in Sources */,
 				8A640005272864F200116737 /* RemoteApiTrainingsTodayDetailsLoader.swift in Sources */,
 				8A59C71B2727DC1F00875A5C /* LocalApiClient.swift in Sources */,
