@@ -76,38 +76,22 @@ class RemoteTrainingsTodayLoaderTests: XCTestCase {
     func test_load_deliversItemsOn200HTTPResponseWithEmptyJSONList() {
         let (sut, client) = makeSUT()
         
-        let item1 = TrainingsTodayItem(
+        let item1 = makeItem(
             id: UUID(),
             horseName: "some name",
-            date: nil,
             location: "some location"
         )
         
-        let item1JSON = [
-            "id": item1.id.uuidString,
-            "horseName": item1.horseName,
-            "location": item1.location
-        ]
-        
-        let item2 = TrainingsTodayItem(
+        let item2 = makeItem(
             id: UUID(),
             horseName: "another name",
-            date: nil,
             location: "another location"
         )
         
-        let item2JSON = [
-            "id": item2.id.uuidString,
-            "horseName": item2.horseName,
-            "location": item2.location
-        ]
+        let items = [item1.model, item2.model]
         
-        let itemsJSON = [
-            "items": [item1JSON, item2JSON]
-        ]
-        
-        expect(sut, toCompleteWith: .success([item1, item2]), when: {
-            let json = try! JSONSerialization.data(withJSONObject: itemsJSON)
+        expect(sut, toCompleteWith: .success(items), when: {
+            let json = makeItemsJSON([item1.json, item2.json])
             client.complete(withStatusCode: 200, data: json)
         })
     }
@@ -120,6 +104,32 @@ class RemoteTrainingsTodayLoaderTests: XCTestCase {
         let client = HTTPClientSpy()
         let sut = RemoteTrainingsTodayLoader(url: url, client: client)
         return (sut, client)
+    }
+    
+    // TODO: Remove optional date
+    private func makeItem(id: UUID,
+                          horseName: String,
+                          date: Date? = nil,
+                          location: String) -> (model: TrainingsTodayItem, json: [String: Any]) {
+        let item = TrainingsTodayItem(id: id,
+                                      horseName: horseName,
+                                      date: date,
+                                      location: location)
+        let json = [
+            "id": id.uuidString,
+            "horseName": horseName,
+            "date": nil,
+            "location": location
+        ].reduce(into: [String: Any]()) { acc, e in
+            if let value = e.value { acc[e.key] = value }
+        }
+        
+        return (item, json)
+    }
+    
+    private func makeItemsJSON(_ items: [[String: Any]]) -> Data {
+        let json = ["items": items]
+        return try! JSONSerialization.data(withJSONObject: json)
     }
     
     private func expect(_ sut: RemoteTrainingsTodayLoader,
