@@ -39,10 +39,11 @@ public final class RemoteTrainingsTodayLoader {
     public func load(completion: @escaping (Result) -> Void) {
         client.get(from: url) { result in
             switch result {
-            case let .success(data, _):
+            case let .success(data, response):
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .formatted(DateFormatter.full)
-                if let root = try? decoder.decode(Root.self, from: data) {
+                if response.statusCode == 200,
+                   let root = try? decoder.decode(Root.self, from: data) {
                     completion(.success(root.items))
                 } else {
                     completion(.failure(.invalidData))
