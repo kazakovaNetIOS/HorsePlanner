@@ -40,8 +40,10 @@ public final class RemoteTrainingsTodayLoader {
         client.get(from: url) { result in
             switch result {
             case let .success(data, _):
-                if let _ = try? JSONSerialization.jsonObject(with: data) {
-                    completion(.success([]))
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .formatted(DateFormatter.full)
+                if let root = try? decoder.decode(Root.self, from: data) {
+                    completion(.success(root.items))
                 } else {
                     completion(.failure(.invalidData))
                 }
@@ -50,4 +52,8 @@ public final class RemoteTrainingsTodayLoader {
             }
         }
     }
+}
+
+private struct Root: Decodable {
+    let items: [TrainingsTodayItem]
 }

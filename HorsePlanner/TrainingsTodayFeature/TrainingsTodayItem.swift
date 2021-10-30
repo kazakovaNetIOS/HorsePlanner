@@ -8,8 +8,23 @@
 import Foundation
 
 public struct TrainingsTodayItem: Equatable {
-    let id: UUID
-    let horseName: String
-    let date: Date
-    let location: String
+    public let id: UUID
+    public let horseName: String
+    public let date: Date?
+    public let location: String
+    
+    public init(id: UUID,
+                horseName: String,
+                date: Date?,
+                location: String) {
+        self.id = id
+        self.horseName = horseName
+        self.date = date
+        self.location = location
+    }
 }
+
+// MARK: - Decodable
+
+extension TrainingsTodayItem: Decodable {}
+

@@ -73,6 +73,45 @@ class RemoteTrainingsTodayLoaderTests: XCTestCase {
         })
     }
     
+    func test_load_deliversItemsOn200HTTPResponseWithEmptyJSONList() {
+        let (sut, client) = makeSUT()
+        
+        let item1 = TrainingsTodayItem(
+            id: UUID(),
+            horseName: "some name",
+            date: nil,
+            location: "some location"
+        )
+        
+        let item1JSON = [
+            "id": item1.id.uuidString,
+            "horseName": item1.horseName,
+            "location": item1.location
+        ]
+        
+        let item2 = TrainingsTodayItem(
+            id: UUID(),
+            horseName: "another name",
+            date: nil,
+            location: "another location"
+        )
+        
+        let item2JSON = [
+            "id": item2.id.uuidString,
+            "horseName": item2.horseName,
+            "location": item2.location
+        ]
+        
+        let itemsJSON = [
+            "items": [item1JSON, item2JSON]
+        ]
+        
+        expect(sut, toCompleteWith: .success([item1, item2]), when: {
+            let json = try! JSONSerialization.data(withJSONObject: itemsJSON)
+            client.complete(withStatusCode: 200, data: json)
+        })
+    }
+    
     // MARK: - Helpers
     
     private func makeSUT(url: URL = URL(string: "http://a-givenw-url.com")!)
