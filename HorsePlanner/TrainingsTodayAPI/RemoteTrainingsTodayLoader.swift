@@ -40,13 +40,10 @@ public final class RemoteTrainingsTodayLoader {
         client.get(from: url) { result in
             switch result {
             case let .success(data, response):
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .formatted(DateFormatter.full)
-                if response.statusCode == 200,
-                   let root = try? decoder.decode(Root.self, from: data) {
-                    completion(.success(root.items
-                                            .map { $0.item }))
-                } else {
+                do {
+                    let items = try TrainingsTodayMapper.map(data, response)
+                    completion(.success(items))
+                } catch {
                     completion(.failure(.invalidData))
                 }
             case .failure:
@@ -56,20 +53,33 @@ public final class RemoteTrainingsTodayLoader {
     }
 }
 
-private struct Root: Decodable {
-    let items: [Item]
-}
+private class TrainingsTodayMapper {
+    private struct Root: Decodable {
+        let items: [Item]
+    }
 
-private struct Item: Decodable {
-    let id: UUID
-    let horseName: String
-    let date: Date?
-    let location: String
+    private struct Item: Decodable {
+        let id: UUID
+        let horseName: String
+        let date: Date?
+        let location: String
+        
+        var item: TrainingsTodayItem {
+            TrainingsTodayItem(id: id,
+                               horseName: horseName,
+                               date: date,
+                               location: location)
+        }
+    }
     
-    var item: TrainingsTodayItem {
-        TrainingsTodayItem(id: id,
-                           horseName: horseName,
-                           date: date,
-                           location: location)
+    static func map(_ data: Data, _ response: HTTPURLResponse) throws -> [TrainingsTodayItem] {
+        guard response.statusCode == 200 else {
+            throw RemoteTrainingsTodayLoader.Error.invalidData
+        }
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(DateFormatter.full)
+        
+        let root = decoder.decode(Root.self, from: data)
+        return try root.items.map { $0.item }
     }
 }
