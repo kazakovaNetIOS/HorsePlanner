@@ -97,6 +97,20 @@ class RemoteTrainingsTodayLoaderTests: XCTestCase {
         })
     }
     
+    func test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() {
+        let url = URL(string: "http://any-url.com")!
+        let client = HTTPClientSpy()
+        var sut: RemoteTrainingsTodayLoader? = RemoteTrainingsTodayLoader(url: url, client: client)
+        
+        var capturedResults = [RemoteTrainingsTodayLoader.Result]()
+        sut?.load { capturedResults.append($0) }
+        
+        sut = nil
+        client.complete(withStatusCode: 200, data: makeItemsJSON([]))
+        
+        XCTAssert(capturedResults.isEmpty)
+    }
+    
     // MARK: - Helpers
     
     private func makeSUT(url: URL = URL(string: "http://a-givenw-url.com")!,
@@ -106,8 +120,10 @@ class RemoteTrainingsTodayLoaderTests: XCTestCase {
            client: HTTPClientSpy) {
         let client = HTTPClientSpy()
         let sut = RemoteTrainingsTodayLoader(url: url, client: client)
+        
         trackForMemoryLeaks(sut, file: file, line: line)
         trackForMemoryLeaks(client, file: file, line: line)
+        
         return (sut, client)
     }
     
