@@ -23,8 +23,3 @@ public struct TrainingsTodayItem: Equatable {
         self.location = location
     }
 }
-
-// MARK: - Decodable
-
-extension TrainingsTodayItem: Decodable {}
-

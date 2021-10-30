@@ -44,7 +44,8 @@ public final class RemoteTrainingsTodayLoader {
                 decoder.dateDecodingStrategy = .formatted(DateFormatter.full)
                 if response.statusCode == 200,
                    let root = try? decoder.decode(Root.self, from: data) {
-                    completion(.success(root.items))
+                    completion(.success(root.items
+                                            .map { $0.item }))
                 } else {
                     completion(.failure(.invalidData))
                 }
@@ -56,5 +57,19 @@ public final class RemoteTrainingsTodayLoader {
 }
 
 private struct Root: Decodable {
-    let items: [TrainingsTodayItem]
+    let items: [Item]
+}
+
+private struct Item: Decodable {
+    let id: UUID
+    let horseName: String
+    let date: Date?
+    let location: String
+    
+    var item: TrainingsTodayItem {
+        TrainingsTodayItem(id: id,
+                           horseName: horseName,
+                           date: date,
+                           location: location)
+    }
 }
