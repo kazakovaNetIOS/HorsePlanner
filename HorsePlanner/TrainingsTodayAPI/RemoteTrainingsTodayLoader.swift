@@ -72,14 +72,16 @@ private class TrainingsTodayMapper {
         }
     }
     
+    static var OK_200: Int { 200 }
+    
     static func map(_ data: Data, _ response: HTTPURLResponse) throws -> [TrainingsTodayItem] {
-        guard response.statusCode == 200 else {
+        guard response.statusCode == OK_200 else {
             throw RemoteTrainingsTodayLoader.Error.invalidData
         }
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted(DateFormatter.full)
         
-        let root = decoder.decode(Root.self, from: data)
-        return try root.items.map { $0.item }
+        let root = try decoder.decode(Root.self, from: data)
+        return root.items.map { $0.item }
     }
 }
