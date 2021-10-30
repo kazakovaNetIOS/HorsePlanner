@@ -99,12 +99,26 @@ class RemoteTrainingsTodayLoaderTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeSUT(url: URL = URL(string: "http://a-givenw-url.com")!)
+    private func makeSUT(url: URL = URL(string: "http://a-givenw-url.com")!,
+                         file: StaticString = #filePath,
+                         line: UInt = #line)
     ->    (sut: RemoteTrainingsTodayLoader,
            client: HTTPClientSpy) {
         let client = HTTPClientSpy()
         let sut = RemoteTrainingsTodayLoader(url: url, client: client)
+        trackForMemoryLeaks(sut, file: file, line: line)
+        trackForMemoryLeaks(client, file: file, line: line)
         return (sut, client)
+    }
+    
+    private func trackForMemoryLeaks(_ instance: AnyObject,
+                                     file: StaticString = #filePath,
+                                     line: UInt = #line) {
+        addTeardownBlock { [weak instance] in
+            XCTAssertNil(instance, "Instance should have been deallocated. Potential memory leak.",
+                         file: file,
+                         line: line)
+        }
     }
     
     // TODO: Remove optional date
