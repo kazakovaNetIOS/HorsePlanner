@@ -12,8 +12,6 @@ public enum LoadTrainingsTodayResult<Error: Swift.Error> {
     case failure(Error)
 }
 
-extension LoadTrainingsTodayResult: Equatable where Error: Equatable {}
-
 protocol TrainingsTodayLoader {
     associatedtype Error: Swift.Error
     
