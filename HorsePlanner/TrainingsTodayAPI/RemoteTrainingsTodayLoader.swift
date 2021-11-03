@@ -7,7 +7,7 @@
 
 import Foundation
 
-public final class RemoteTrainingsTodayLoader {
+public final class RemoteTrainingsTodayLoader: TrainingsTodayLoader {
     private let url: URL
     private let client: HTTPClient
     
