@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct RemoteTrainingsTodayLoader1: TrainingsTodayLoader {
-    private var api: RemoteApiClient
+//struct RemoteTrainingsTodayLoader1: TrainingsTodayLoader {
+//    private var api: RemoteApiClient
     
-    func load(completion: @escaping (LoadTrainingsTodayResult) -> Void) {
-        print("remoteTrainingsTodayLoader.loadTrainingsToday process")
-        api.loadTrainingsToday { horses in
-            completion(horses)
-        }
-    }
-}
+//    func load(completion: @escaping (LoadTrainingsTodayResult) -> Void) {
+//        print("remoteTrainingsTodayLoader.loadTrainingsToday process")
+//        api.loadTrainingsToday { horses in
+//            completion(horses)
+//        }
+//    }
+//}

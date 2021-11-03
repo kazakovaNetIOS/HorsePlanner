@@ -7,15 +7,15 @@
 
 import Foundation
 
-extension LocalApiClient {
-    func loadTrainingsToday(completion: (LoadTrainingsTodayResult) -> Void) {
-        let horses: [Horse] = load(from: "TrainingsToday.json")
-        let items = horses.map { horse in
-            TrainingsTodayItem(id: .init(),
-                               horseName: horse.name,
-                               date: Date(),
-                               location: "")
-        }
-        completion(.success(items))
-    }
-}
+//extension LocalApiClient {
+//    func loadTrainingsToday(completion: (LoadTrainingsTodayResult) -> Void) {
+//        let horses: [Horse] = load(from: "TrainingsToday.json")
+//        let items = horses.map { horse in
+//            TrainingsTodayItem(id: .init(),
+//                               horseName: horse.name,
+//                               date: Date(),
+//                               location: "")
+//        }
+//        completion(.success(items))
+//    }
+//}

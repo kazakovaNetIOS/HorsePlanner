@@ -16,10 +16,7 @@ public final class RemoteTrainingsTodayLoader {
         case invalidData
     }
     
-    public enum Result: Equatable {
-        case success([TrainingsTodayItem])
-        case failure(Error)
-    }
+    public typealias Result = LoadTrainingsTodayResult<Error>
     
     public init(url: URL,
                 client: HTTPClient) {

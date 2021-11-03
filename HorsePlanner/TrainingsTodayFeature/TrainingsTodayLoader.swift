@@ -7,11 +7,15 @@
 
 import Foundation
 
-enum LoadTrainingsTodayResult {
+public enum LoadTrainingsTodayResult<Error: Swift.Error> {
     case success([TrainingsTodayItem])
-    case error(Error)
+    case failure(Error)
 }
 
+extension LoadTrainingsTodayResult: Equatable where Error: Equatable {}
+
 protocol TrainingsTodayLoader {
-    func load(completion: @escaping (LoadTrainingsTodayResult) -> Void)
+    associatedtype Error: Swift.Error
+    
+    func load(completion: @escaping (LoadTrainingsTodayResult<Error>) -> Void)
 }

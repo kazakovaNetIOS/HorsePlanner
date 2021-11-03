@@ -12,20 +12,20 @@ struct Reachability {
 }
 
 class RemoteWithLocalFallbackTrainingsTodayLoader {
-    let remote: RemoteTrainingsTodayLoader1
-    let local: LocalTrainingsTodayLoader
+//    let remote: RemoteTrainingsTodayLoader1
+//    let local: LocalTrainingsTodayLoader
     
-    init(remote: RemoteTrainingsTodayLoader1, local: LocalTrainingsTodayLoader) {
-        self.remote = remote
-        self.local = local
-    }
+//    init(remote: RemoteTrainingsTodayLoader1, local: LocalTrainingsTodayLoader) {
+//        self.remote = remote
+//        self.local = local
+//    }
 }
 
-extension RemoteWithLocalFallbackTrainingsTodayLoader: TrainingsTodayLoader {
-    func load(completion: @escaping (LoadTrainingsTodayResult) -> Void) {
-        let load =  Reachability.networkAvailable ?
-        remote.load : local.load
-        
+//extension RemoteWithLocalFallbackTrainingsTodayLoader: TrainingsTodayLoader {
+//    func load(completion: @escaping (LoadTrainingsTodayResult) -> Void) {
+//        let load =  Reachability.networkAvailable ?
+//        remote.load : local.load
+//        
 //        load(completion)
-    }
-}
+//    }
+//}
