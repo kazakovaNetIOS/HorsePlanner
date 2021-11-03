@@ -16,7 +16,7 @@ public final class RemoteTrainingsTodayLoader: TrainingsTodayLoader {
         case invalidData
     }
     
-    public typealias Result = LoadTrainingsTodayResult<Error>
+    public typealias Result = LoadTrainingsTodayResult
     
     public init(url: URL,
                 client: HTTPClient) {
@@ -32,7 +32,7 @@ public final class RemoteTrainingsTodayLoader: TrainingsTodayLoader {
             case let .success(data, response):
                 completion(TrainingsTodayMapper.map(data, from: response))
             case .failure:
-                completion(.failure(.connectivity))
+                completion(.failure(Error.connectivity))
             }
         }
     }
