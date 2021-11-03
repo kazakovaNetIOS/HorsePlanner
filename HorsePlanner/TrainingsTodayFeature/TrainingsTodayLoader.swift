@@ -12,6 +12,6 @@ public enum LoadTrainingsTodayResult {
     case failure(Error)
 }
 
-protocol TrainingsTodayLoader {
+public protocol TrainingsTodayLoader {
     func load(completion: @escaping (LoadTrainingsTodayResult) -> Void)
 }
