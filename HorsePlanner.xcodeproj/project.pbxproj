@@ -35,6 +35,7 @@
 		8AAFB87E2725E0480001673A /* RemoteApiClient+TrainingsTodayExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB87D2725E0480001673A /* RemoteApiClient+TrainingsTodayExtention.swift */; };
 		8AAFB8812725E1260001673A /* Arbitrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB8802725E1260001673A /* Arbitrary.swift */; };
 		8AAFB8832725E4F80001673A /* TrainingsTodayDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAFB8822725E4F80001673A /* TrainingsTodayDetailViewModel.swift */; };
+		8AB89C3A273B1B7E00AF6679 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB89C39273B1B7E00AF6679 /* URLSessionHTTPClient.swift */; };
 		8AB8E6B4272C9B88002FEA5F /* DateFormatter+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8E6B3272C9B88002FEA5F /* DateFormatter+Extentions.swift */; };
 		8AB8E6B6272C9FE6002FEA5F /* Date+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8E6B5272C9FE6002FEA5F /* Date+Extentions.swift */; };
 		8AB8E6B8272D49DC002FEA5F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8E6B7272D49DC002FEA5F /* HTTPClient.swift */; };
@@ -88,6 +89,7 @@
 		8AAFB87D2725E0480001673A /* RemoteApiClient+TrainingsTodayExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteApiClient+TrainingsTodayExtention.swift"; sourceTree = "<group>"; };
 		8AAFB8802725E1260001673A /* Arbitrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arbitrary.swift; sourceTree = "<group>"; };
 		8AAFB8822725E4F80001673A /* TrainingsTodayDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsTodayDetailViewModel.swift; sourceTree = "<group>"; };
+		8AB89C39273B1B7E00AF6679 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		8AB8E6B3272C9B88002FEA5F /* DateFormatter+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extentions.swift"; sourceTree = "<group>"; };
 		8AB8E6B5272C9FE6002FEA5F /* Date+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extentions.swift"; sourceTree = "<group>"; };
 		8AB8E6B7272D49DC002FEA5F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				8A83CDF4272B435D00AE1722 /* RemoteTrainingsTodayLoader.swift */,
 				8AB8E6B7272D49DC002FEA5F /* HTTPClient.swift */,
 				8AB8E6B9272D4A30002FEA5F /* TrainingsTodayMapper.swift */,
+				8AB89C39273B1B7E00AF6679 /* URLSessionHTTPClient.swift */,
 			);
 			path = TrainingsTodayAPI;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				8A6139DE271B78DF00FBD5F5 /* TrainingsTodayRow.swift in Sources */,
 				8A59C70D2727322500875A5C /* RemoteTrainingsTodayLoader1.swift in Sources */,
 				8ACCB5202729F6E300D53748 /* TrainingsTodayItem.swift in Sources */,
+				8AB89C3A273B1B7E00AF6679 /* URLSessionHTTPClient.swift in Sources */,
 				8A59C7212727DCB800875A5C /* LocalApiClient+TrainingsTodayExtention.swift in Sources */,
 				8A6139C7271A2D4C00FBD5F5 /* HorsePlannerApp.swift in Sources */,
 				8AC038FF271B85BB00DF27AD /* TrainingsTodayDetail.swift in Sources */,
