@@ -11,21 +11,7 @@ import HorsePlanner
 class HorsePlannerAPIEndToEndTests: XCTestCase {
     
     func test_endToEndTestServerGETTrainingsTodayResult_matchesFixedTestAccountData() {
-        let testServerURL = URL(string: "http://a0594209.xsph.ru/TrainingsTodayJson.json")!
-        let client =  URLSessionHTTPClient()
-        let loader = RemoteTrainingsTodayLoader(url: testServerURL, client: client)
-        
-        let exp = expectation(description: "Wait for load completion")
-        
-        var receivedResult: LoadTrainingsTodayResult?
-        loader.load { result in
-            receivedResult = result
-            exp.fulfill()
-        }
-        
-        wait(for: [exp], timeout: 5.0)
-        
-        switch receivedResult {
+        switch getTrainingsTodayResult() {
         case let .success(items)?:
             XCTAssertEqual(items.count, 8, "Expected 8 items in the test account trainings")
             XCTAssertEqual(items[0], expectedItem(at: 0))
@@ -44,6 +30,23 @@ class HorsePlannerAPIEndToEndTests: XCTestCase {
     }
     
     // MARK: - Helpers
+    
+    private func getTrainingsTodayResult() -> LoadTrainingsTodayResult? {
+        let testServerURL = URL(string: "http://a0594209.xsph.ru/TrainingsTodayJson.json")!
+        let client =  URLSessionHTTPClient()
+        let loader = RemoteTrainingsTodayLoader(url: testServerURL, client: client)
+        
+        let exp = expectation(description: "Wait for load completion")
+        
+        var receivedResult: LoadTrainingsTodayResult?
+        loader.load { result in
+            receivedResult = result
+            exp.fulfill()
+        }
+        
+        wait(for: [exp], timeout: 5.0)
+        return receivedResult
+    }
     
     private func expectedItem(at index: Int) -> TrainingsTodayItem {
         TrainingsTodayItem(
