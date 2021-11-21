@@ -31,11 +31,13 @@ class HorsePlannerAPIEndToEndTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func getTrainingsTodayResult() -> LoadTrainingsTodayResult? {
+    private func getTrainingsTodayResult(file: StaticString = #filePath,
+                                         line: UInt = #line) -> LoadTrainingsTodayResult? {
         let testServerURL = URL(string: "http://a0594209.xsph.ru/TrainingsTodayJson.json")!
         let client =  URLSessionHTTPClient()
         let loader = RemoteTrainingsTodayLoader(url: testServerURL, client: client)
-        
+        trackForMemoryLeaks(client, file: file, line: line)
+        trackForMemoryLeaks(loader, file: file, line: line )
         let exp = expectation(description: "Wait for load completion")
         
         var receivedResult: LoadTrainingsTodayResult?
