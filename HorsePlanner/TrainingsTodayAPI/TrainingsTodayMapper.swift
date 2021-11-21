@@ -18,13 +18,13 @@ internal final class TrainingsTodayMapper {
     
     private struct Item: Decodable {
         let id: UUID
-        let horseName: String
+        let horsename: String
         let date: Date?
         let location: String
         
         var item: TrainingsTodayItem {
             TrainingsTodayItem(id: id,
-                               horseName: horseName,
+                               horseName: horsename,
                                date: date,
                                location: location)
         }

@@ -12,7 +12,7 @@ import Foundation
 //        let horses: [Horse] = load(from: "TrainingsToday.json")
 //        let items = horses.map { horse in
 //            TrainingsTodayItem(id: .init(),
-//                               horseName: horse.name,
+//                               horsename: horse.name,
 //                               date: Date(),
 //                               location: "")
 //        }

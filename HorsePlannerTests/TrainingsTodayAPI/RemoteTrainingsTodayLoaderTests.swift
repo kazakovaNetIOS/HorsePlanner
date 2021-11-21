@@ -142,7 +142,7 @@ class RemoteTrainingsTodayLoaderTests: XCTestCase {
                                       location: location)
         let json = [
             "id": id.uuidString,
-            "horseName": horseName,
+            "horsename": horseName,
             "date": nil,
             "location": location
         ].reduce(into: [String: Any]()) { acc, e in
