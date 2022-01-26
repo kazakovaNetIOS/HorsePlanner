@@ -34,7 +34,7 @@ class HorsePlannerAPIEndToEndTests: XCTestCase {
     private func getTrainingsTodayResult(file: StaticString = #filePath,
                                          line: UInt = #line) -> LoadTrainingsTodayResult? {
         let testServerURL = URL(string: "http://a0594209.xsph.ru/TrainingsTodayJson.json")!
-        let client =  URLSessionHTTPClient()
+        let client =  URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
         let loader = RemoteTrainingsTodayLoader(url: testServerURL, client: client)
         trackForMemoryLeaks(client, file: file, line: line)
         trackForMemoryLeaks(loader, file: file, line: line )
